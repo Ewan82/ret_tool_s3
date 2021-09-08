@@ -1,0 +1,547 @@
+ INFO::retrieval_read_ctl:read settings from file ***retrctl.nml***...
+ INFO::retrieval_read_ctl:...reading done.
+ INFO::use_prior_term: T
+ INFO::use_state_term: T
+ INFO::gradient_tolerance: .10000E+01
+ INFO::priopr_pert: .00000E+00
+ INFO::runretrieval:calling initf...
+ DEBUG::load_ivgeom:ndims= 2
+ INFO::initf:retrieval configuration was read from ***retrconfig.nc***
+ DEBUG::initf:ncrd_retrieval_config has finished, yields:npts=  75 npts_s1=  65 npts_s2=  10
+ INFO::load_sitenml:successfully read site namelist file ***site.nml***
+ INFO::setprior:prior control vector was read from ***retrprior.nc***
+ DEBUG::setprior:ncrd_retrieval_prior terminated successfully
+ INFO::runretrieval:...done.
+ DEBUG::runretrieval:initf yields:n=226 mf=260
+ INFO::runretrieval:calling initx...
+ INFO::runretrieval:...done.
+ INFO::state_model_set:will be setting-up simple state-model of type "mx(i+1)=a(i+1)*x(i) + b(i+1)"
+ INFO::state_model_set:reading model configuration from file ***retrmodel.nc***...
+ INFO::state_model_set:...reading done.
+ INFO::runretrieval:start optimise...
+ INFO::optimise:load control vector boundary settings by calling initb...
+ INFO::initb:bounds were read from file ***retrctlvecbounds.nml***
+ INFO::initb:applying bounds: lai_coeff_lobound=    0.000 lai_coeff_hibound=    1.000
+ INFO::initb:applying bounds: lai_lobound=    0.001 lai_hibound=   10.000
+ INFO::initb:applying bounds: canht_lobound=    0.001 canht_hibound=    4.500
+ INFO::initb:applying bounds: sm_lobound=    0.001 sm_hibound=    0.500
+ INFO::optimise:...done.
+ INFO::optimise:start optimiser...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =          226     M =            5
+
+At X0         0 variables are exactly at the bounds
+ INFO::getobs:initial loading of observations...
+ INFO::getobs:reading S1 observations from ***obs_s1.nc***
+ INFO::ncrd_obs_vector:dataset ---backscatter--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:dataset ---backscatter_unc--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:s1 detected data fill-values:      65
+ INFO::ncrd_obs_vector:s1 detected no uncertainthy fill-values
+ INFO::getobs:...loading S1 observations done.
+ INFO::getobs:reading S2 observations from ***obs_s2.nc***
+ INFO::ncrd_obs_vector:dataset ---brf--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:dataset ---brf_unc--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:s2 detected data fill-values:      51
+ INFO::ncrd_obs_vector:s2 detected unc. fill-values:      51
+ INFO::getobs:...loading observations done.
+ INFO::getobs:...initial loading done
+
+At iterate    0    f=  1.36775D+03    |proj g|=  2.83333D+00
+
+At iterate    1    f=  1.22719D+03    |proj g|=  2.85307D+00
+
+At iterate    2    f=  1.02913D+03    |proj g|=  2.85927D+00
+
+At iterate    3    f=  9.03060D+02    |proj g|=  2.86993D+00
+
+At iterate    4    f=  7.87210D+02    |proj g|=  2.86099D+00
+
+At iterate    5    f=  6.66128D+02    |proj g|=  2.76734D+00
+
+At iterate    6    f=  5.67370D+02    |proj g|=  2.71887D+00
+
+At iterate    7    f=  5.13155D+02    |proj g|=  2.66003D+00
+
+At iterate    8    f=  4.82316D+02    |proj g|=  2.60397D+00
+
+At iterate    9    f=  4.52738D+02    |proj g|=  2.56235D+00
+
+At iterate   10    f=  4.23398D+02    |proj g|=  2.49572D+00
+
+At iterate   11    f=  3.93075D+02    |proj g|=  2.37491D+00
+
+At iterate   12    f=  3.88529D+02    |proj g|=  2.41444D+00
+
+At iterate   13    f=  3.75145D+02    |proj g|=  2.31949D+00
+
+At iterate   14    f=  3.71193D+02    |proj g|=  2.30008D+00
+
+At iterate   15    f=  3.64371D+02    |proj g|=  2.28828D+00
+
+At iterate   16    f=  3.56013D+02    |proj g|=  2.44014D+00
+
+At iterate   17    f=  3.49228D+02    |proj g|=  2.53152D+00
+
+At iterate   18    f=  3.44345D+02    |proj g|=  2.49188D+00
+
+At iterate   19    f=  3.42495D+02    |proj g|=  2.51434D+00
+
+At iterate   20    f=  3.41043D+02    |proj g|=  2.49935D+00
+
+At iterate   21    f=  3.40595D+02    |proj g|=  2.56202D+00
+
+At iterate   22    f=  3.38616D+02    |proj g|=  2.16241D+00
+
+At iterate   23    f=  3.38202D+02    |proj g|=  2.16085D+00
+
+At iterate   24    f=  3.37567D+02    |proj g|=  2.16131D+00
+
+At iterate   25    f=  3.36776D+02    |proj g|=  2.58672D+00
+
+At iterate   26    f=  3.36003D+02    |proj g|=  2.59471D+00
+
+At iterate   27    f=  3.35475D+02    |proj g|=  2.59884D+00
+
+At iterate   28    f=  3.34764D+02    |proj g|=  2.61098D+00
+
+At iterate   29    f=  3.34366D+02    |proj g|=  2.63777D+00
+
+At iterate   30    f=  3.33634D+02    |proj g|=  2.63798D+00
+
+At iterate   31    f=  3.33176D+02    |proj g|=  2.58844D+00
+
+At iterate   32    f=  3.32699D+02    |proj g|=  2.65101D+00
+
+At iterate   33    f=  3.31851D+02    |proj g|=  2.66494D+00
+
+At iterate   34    f=  3.31105D+02    |proj g|=  2.68108D+00
+
+At iterate   35    f=  3.30490D+02    |proj g|=  2.66985D+00
+
+At iterate   36    f=  3.30122D+02    |proj g|=  2.67260D+00
+
+At iterate   37    f=  3.29784D+02    |proj g|=  2.67253D+00
+
+At iterate   38    f=  3.29256D+02    |proj g|=  2.64113D+00
+
+At iterate   39    f=  3.28519D+02    |proj g|=  2.62558D+00
+
+At iterate   40    f=  3.28022D+02    |proj g|=  2.62646D+00
+
+At iterate   41    f=  3.27590D+02    |proj g|=  2.62512D+00
+
+At iterate   42    f=  3.26752D+02    |proj g|=  2.61031D+00
+
+At iterate   43    f=  3.26422D+02    |proj g|=  2.66791D+00
+
+At iterate   44    f=  3.25696D+02    |proj g|=  2.63403D+00
+
+At iterate   45    f=  3.25404D+02    |proj g|=  2.51373D+00
+
+At iterate   46    f=  3.24951D+02    |proj g|=  2.53359D+00
+
+At iterate   47    f=  3.24521D+02    |proj g|=  2.65388D+00
+
+At iterate   48    f=  3.23872D+02    |proj g|=  2.56525D+00
+
+At iterate   49    f=  3.23031D+02    |proj g|=  2.40362D+00
+
+At iterate   50    f=  3.22664D+02    |proj g|=  2.60736D+00
+
+At iterate   51    f=  3.22196D+02    |proj g|=  2.64082D+00
+
+At iterate   52    f=  3.21704D+02    |proj g|=  2.37173D+00
+
+At iterate   53    f=  3.21447D+02    |proj g|=  2.63648D+00
+
+At iterate   54    f=  3.21282D+02    |proj g|=  2.63635D+00
+
+At iterate   55    f=  3.21218D+02    |proj g|=  2.63910D+00
+
+At iterate   56    f=  3.20854D+02    |proj g|=  2.30882D+00
+
+At iterate   57    f=  3.20701D+02    |proj g|=  2.30877D+00
+
+At iterate   58    f=  3.20642D+02    |proj g|=  2.30718D+00
+
+At iterate   59    f=  3.20381D+02    |proj g|=  2.57686D+00
+
+At iterate   60    f=  3.20188D+02    |proj g|=  2.64773D+00
+
+At iterate   61    f=  3.19902D+02    |proj g|=  2.65178D+00
+
+At iterate   62    f=  3.19820D+02    |proj g|=  2.66124D+00
+
+At iterate   63    f=  3.19519D+02    |proj g|=  2.66582D+00
+
+At iterate   64    f=  3.19504D+02    |proj g|=  2.66999D+00
+
+At iterate   65    f=  3.19058D+02    |proj g|=  2.65021D+00
+
+At iterate   66    f=  3.18838D+02    |proj g|=  2.67748D+00
+
+At iterate   67    f=  3.18733D+02    |proj g|=  2.67723D+00
+
+At iterate   68    f=  3.18385D+02    |proj g|=  2.66833D+00
+
+At iterate   69    f=  3.18382D+02    |proj g|=  2.66157D+00
+
+At iterate   70    f=  3.18061D+02    |proj g|=  2.32779D+00
+
+At iterate   71    f=  3.17980D+02    |proj g|=  2.65691D+00
+
+At iterate   72    f=  3.17696D+02    |proj g|=  2.65679D+00
+
+At iterate   73    f=  3.17519D+02    |proj g|=  2.65446D+00
+
+At iterate   74    f=  3.17290D+02    |proj g|=  2.65921D+00
+
+At iterate   75    f=  3.17197D+02    |proj g|=  2.13419D+00
+
+At iterate   76    f=  3.17128D+02    |proj g|=  1.93707D+00
+
+At iterate   77    f=  3.17057D+02    |proj g|=  2.54921D+00
+
+At iterate   78    f=  3.16935D+02    |proj g|=  2.65164D+00
+
+At iterate   79    f=  3.16842D+02    |proj g|=  1.80568D+00
+
+At iterate   80    f=  3.16606D+02    |proj g|=  2.65033D+00
+
+At iterate   81    f=  3.16505D+02    |proj g|=  2.27799D+00
+
+At iterate   82    f=  3.16283D+02    |proj g|=  2.56803D+00
+
+At iterate   83    f=  3.16223D+02    |proj g|=  1.86823D+00
+
+At iterate   84    f=  3.16194D+02    |proj g|=  1.73629D+00
+
+At iterate   85    f=  3.16162D+02    |proj g|=  1.70377D+00
+
+At iterate   86    f=  3.16087D+02    |proj g|=  2.59326D+00
+
+At iterate   87    f=  3.16033D+02    |proj g|=  1.75904D+00
+
+At iterate   88    f=  3.16008D+02    |proj g|=  1.36265D+00
+
+At iterate   89    f=  3.15979D+02    |proj g|=  1.51086D+00
+
+At iterate   90    f=  3.15923D+02    |proj g|=  2.28127D+00
+
+At iterate   91    f=  3.15911D+02    |proj g|=  2.64806D+00
+
+At iterate   92    f=  3.15825D+02    |proj g|=  1.69494D+00
+
+At iterate   93    f=  3.15816D+02    |proj g|=  1.60208D+00
+
+At iterate   94    f=  3.15815D+02    |proj g|=  1.59561D+00
+
+At iterate   95    f=  3.15815D+02    |proj g|=  1.59502D+00
+
+ Bad direction in the line search;
+   refresh the lbfgs memory and restart the iteration.
+
+At iterate   96    f=  3.15797D+02    |proj g|=  1.82964D+00
+
+At iterate   97    f=  3.15774D+02    |proj g|=  1.80367D+00
+
+At iterate   98    f=  3.15761D+02    |proj g|=  1.35517D+00
+
+At iterate   99    f=  3.15749D+02    |proj g|=  1.11287D+00
+
+At iterate  100    f=  3.15746D+02    |proj g|=  1.08774D+00
+
+At iterate  101    f=  3.15746D+02    |proj g|=  1.08635D+00
+
+ Bad direction in the line search;
+   refresh the lbfgs memory and restart the iteration.
+
+At iterate  102    f=  3.15746D+02    |proj g|=  1.08617D+00
+
+At iterate  103    f=  3.15746D+02    |proj g|=  1.08617D+00
+
+At iterate  104    f=  3.15746D+02    |proj g|=  1.08617D+00
+
+ Bad direction in the line search;
+   refresh the lbfgs memory and restart the iteration.
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+  226    105    303    206     0     0   1.086D+00   3.157D+02
+  F =   315.74564171762654     
+
+ABNORMAL_TERMINATION_IN_LNSRCH                              
+
+ Line search cannot locate an adequate point after 20 function
+  and gradient evaluations.  Previous x, f and g restored.
+ Possible causes: 1 error in function or gradient evaluation;
+                  2 rounding error dominate computation.
+
+ Cauchy                time 1.103E-03 seconds.
+ Subspace minimization time 1.887E-03 seconds.
+ Line search           time 1.342E+03 seconds.
+
+ Total User time 1.442E+03 seconds.
+
+ INFO::optimise:...optimiser finished.
+ INFO::runretrieval:...optimise DONE
+ INFO::runretrieval::opti_succeed: F
+ 
+        i                Prior           Posterior          Change [%]
+ 
+        1         0.100000E+00        0.992921E-01            -0.70786
+        2         0.150000E+01        0.204738E+01            36.49194
+        3         0.150000E+01        0.149945E+01            -0.03678
+        4         0.300000E+00        0.240848E+00           -19.71737
+        5         0.150000E+01        0.204861E+01            36.57370
+        6         0.150000E+01        0.149439E+01            -0.37384
+        7         0.300000E+00        0.240291E+00           -19.90292
+        8         0.150000E+01        0.205708E+01            37.13852
+        9         0.150000E+01        0.150069E+01             0.04580
+       10         0.300000E+00        0.175287E+00           -41.57109
+       11         0.150000E+01        0.207431E+01            38.28756
+       12         0.150000E+01        0.152341E+01             1.56087
+       13         0.300000E+00        0.164378E+00           -45.20732
+       14         0.150000E+01        0.207195E+01            38.13032
+       15         0.150000E+01        0.151554E+01             1.03577
+       16         0.300000E+00        0.181606E+00           -39.46479
+       17         0.150000E+01        0.217230E+01            44.81996
+       18         0.150000E+01        0.152180E+01             1.45362
+       19         0.300000E+00        0.179737E+00           -40.08774
+       20         0.150000E+01        0.225606E+01            50.40394
+       21         0.150000E+01        0.150387E+01             0.25786
+       22         0.300000E+00        0.185915E+00           -38.02817
+       23         0.150000E+01        0.234381E+01            56.25397
+       24         0.150000E+01        0.150233E+01             0.15543
+       25         0.300000E+00        0.228105E+00           -23.96514
+       26         0.150000E+01        0.243190E+01            62.12642
+       27         0.150000E+01        0.149686E+01            -0.20966
+       28         0.300000E+00        0.262913E+00           -12.36228
+       29         0.150000E+01        0.252404E+01            68.26908
+       30         0.150000E+01        0.149220E+01            -0.52015
+       31         0.300000E+00        0.263394E+00           -12.20185
+       32         0.150000E+01        0.262485E+01            74.98969
+       33         0.150000E+01        0.150001E+01             0.00070
+       34         0.300000E+00        0.219468E+00           -26.84415
+       35         0.150000E+01        0.273391E+01            82.26074
+       36         0.150000E+01        0.152828E+01             1.88542
+       37         0.300000E+00        0.212565E+00           -29.14503
+       38         0.150000E+01        0.282166E+01            88.11080
+       39         0.150000E+01        0.151044E+01             0.69604
+       40         0.300000E+00        0.262673E+00           -12.44242
+       41         0.150000E+01        0.290776E+01            93.85033
+       42         0.150000E+01        0.150225E+01             0.14971
+       43         0.300000E+00        0.265671E+00           -11.44305
+       44         0.150000E+01        0.299307E+01            99.53778
+       45         0.150000E+01        0.149924E+01            -0.05038
+       46         0.300000E+00        0.302020E+00             0.67321
+       47         0.150000E+01        0.307975E+01           105.31663
+       48         0.150000E+01        0.149894E+01            -0.07087
+       49         0.300000E+00        0.331450E+00            10.48347
+       50         0.150000E+01        0.316525E+01           111.01658
+       51         0.150000E+01        0.148988E+01            -0.67469
+       52         0.300000E+00        0.334425E+00            11.47501
+       53         0.150000E+01        0.326015E+01           117.34356
+       54         0.150000E+01        0.149034E+01            -0.64433
+       55         0.300000E+00        0.348182E+00            16.06051
+       56         0.150000E+01        0.336369E+01           124.24622
+       57         0.150000E+01        0.149264E+01            -0.49072
+       58         0.300000E+00        0.347510E+00            15.83658
+       59         0.150000E+01        0.347331E+01           131.55428
+       60         0.150000E+01        0.149744E+01            -0.17035
+       61         0.300000E+00        0.340061E+00            13.35369
+       62         0.150000E+01        0.358290E+01           138.86025
+       63         0.150000E+01        0.148762E+01            -0.82553
+       64         0.300000E+00        0.341028E+00            13.67584
+       65         0.150000E+01        0.370046E+01           146.69766
+       66         0.150000E+01        0.148422E+01            -1.05182
+       67         0.300000E+00        0.331519E+00            10.50618
+       68         0.150000E+01        0.371575E+01           147.71670
+       69         0.150000E+01        0.148597E+01            -0.93549
+       70         0.300000E+00        0.334027E+00            11.34247
+       71         0.150000E+01        0.373947E+01           149.29789
+       72         0.150000E+01        0.148710E+01            -0.86016
+       73         0.300000E+00        0.353882E+00            17.96065
+       74         0.150000E+01        0.377268E+01           151.51173
+       75         0.150000E+01        0.148842E+01            -0.77189
+       76         0.300000E+00        0.354524E+00            18.17473
+       77         0.150000E+01        0.381516E+01           154.34404
+       78         0.150000E+01        0.148830E+01            -0.77985
+       79         0.300000E+00        0.361277E+00            20.42569
+       80         0.150000E+01        0.386722E+01           157.81496
+       81         0.150000E+01        0.148774E+01            -0.81737
+       82         0.300000E+00        0.361360E+00            20.45317
+       83         0.150000E+01        0.392816E+01           161.87735
+       84         0.150000E+01        0.148697E+01            -0.86865
+       85         0.300000E+00        0.368566E+00            22.85538
+       86         0.150000E+01        0.399681E+01           166.45430
+       87         0.150000E+01        0.148751E+01            -0.83241
+       88         0.300000E+00        0.369480E+00            23.16006
+       89         0.150000E+01        0.407405E+01           171.60320
+       90         0.150000E+01        0.148825E+01            -0.78324
+       91         0.300000E+00        0.380153E+00            26.71771
+       92         0.150000E+01        0.416055E+01           177.36986
+       93         0.150000E+01        0.148912E+01            -0.72529
+       94         0.300000E+00        0.372494E+00            24.16466
+       95         0.150000E+01        0.425377E+01           183.58448
+       96         0.150000E+01        0.148523E+01            -0.98499
+       97         0.300000E+00        0.372715E+00            24.23841
+       98         0.150000E+01        0.435857E+01           190.57150
+       99         0.150000E+01        0.148662E+01            -0.89199
+      100         0.300000E+00        0.368600E+00            22.86677
+      101         0.150000E+01        0.447417E+01           198.27801
+      102         0.150000E+01        0.148578E+01            -0.94788
+      103         0.300000E+00        0.367425E+00            22.47512
+      104         0.150000E+01        0.459853E+01           206.56836
+      105         0.150000E+01        0.148524E+01            -0.98371
+      106         0.300000E+00        0.344121E+00            14.70687
+      107         0.150000E+01        0.473209E+01           215.47243
+      108         0.150000E+01        0.148366E+01            -1.08955
+      109         0.300000E+00        0.342011E+00            14.00354
+      110         0.150000E+01        0.487487E+01           224.99118
+      111         0.150000E+01        0.147857E+01            -1.42835
+      112         0.300000E+00        0.340031E+00            13.34353
+      113         0.150000E+01        0.493468E+01           228.97860
+      114         0.150000E+01        0.148707E+01            -0.86183
+      115         0.300000E+00        0.357549E+00            19.18296
+      116         0.150000E+01        0.500523E+01           233.68195
+      117         0.150000E+01        0.149020E+01            -0.65301
+      118         0.300000E+00        0.357661E+00            19.22028
+      119         0.150000E+01        0.508264E+01           238.84234
+      120         0.150000E+01        0.148580E+01            -0.94676
+      121         0.300000E+00        0.358426E+00            19.47537
+      122         0.150000E+01        0.517102E+01           244.73470
+      123         0.150000E+01        0.148256E+01            -1.16245
+      124         0.300000E+00        0.358334E+00            19.44453
+      125         0.150000E+01        0.527036E+01           251.35761
+      126         0.150000E+01        0.148429E+01            -1.04729
+      127         0.300000E+00        0.341603E+00            13.86771
+      128         0.150000E+01        0.529689E+01           253.12594
+      129         0.150000E+01        0.148654E+01            -0.89740
+      130         0.300000E+00        0.342539E+00            14.17983
+      131         0.150000E+01        0.532715E+01           255.14308
+      132         0.150000E+01        0.148878E+01            -0.74827
+      133         0.300000E+00        0.343757E+00            14.58565
+      134         0.150000E+01        0.536707E+01           257.80446
+      135         0.150000E+01        0.148432E+01            -1.04529
+      136         0.300000E+00        0.347348E+00            15.78278
+      137         0.150000E+01        0.541821E+01           261.21422
+      138         0.150000E+01        0.148092E+01            -1.27194
+      139         0.300000E+00        0.338380E+00            12.79339
+      140         0.150000E+01        0.548041E+01           265.36069
+      141         0.150000E+01        0.147029E+01            -1.98094
+      142         0.300000E+00        0.337031E+00            12.34368
+      143         0.150000E+01        0.544629E+01           263.08588
+      144         0.150000E+01        0.148109E+01            -1.26078
+      145         0.300000E+00        0.338482E+00            12.82718
+      146         0.150000E+01        0.542296E+01           261.53074
+      147         0.150000E+01        0.148740E+01            -0.83999
+      148         0.300000E+00        0.351572E+00            17.19076
+      149         0.150000E+01        0.540718E+01           260.47837
+      150         0.150000E+01        0.148347E+01            -1.10167
+      151         0.300000E+00        0.355052E+00            18.35075
+      152         0.150000E+01        0.539970E+01           259.98031
+      153         0.150000E+01        0.148743E+01            -0.83781
+      154         0.300000E+00        0.355071E+00            18.35691
+      155         0.150000E+01        0.539932E+01           259.95492
+      156         0.150000E+01        0.148095E+01            -1.26973
+      157         0.300000E+00        0.343245E+00            14.41506
+      158         0.150000E+01        0.540876E+01           260.58384
+      159         0.150000E+01        0.146405E+01            -2.39678
+      160         0.300000E+00        0.314273E+00             4.75777
+      161         0.150000E+01        0.530543E+01           253.69525
+      162         0.150000E+01        0.148458E+01            -1.02826
+      163         0.300000E+00        0.326439E+00             8.81287
+      164         0.150000E+01        0.521128E+01           247.41854
+      165         0.150000E+01        0.148900E+01            -0.73346
+      166         0.300000E+00        0.326751E+00             8.91707
+      167         0.150000E+01        0.512381E+01           241.58738
+      168         0.150000E+01        0.149087E+01            -0.60839
+      169         0.300000E+00        0.329430E+00             9.81002
+      170         0.150000E+01        0.504367E+01           236.24473
+      171         0.150000E+01        0.148525E+01            -0.98312
+      172         0.300000E+00        0.334961E+00            11.65370
+      173         0.150000E+01        0.497224E+01           231.48279
+      174         0.150000E+01        0.149071E+01            -0.61950
+      175         0.300000E+00        0.334814E+00            11.60478
+      176         0.150000E+01        0.490702E+01           227.13476
+      177         0.150000E+01        0.149302E+01            -0.46534
+      178         0.300000E+00        0.331093E+00            10.36441
+      179         0.150000E+01        0.484717E+01           223.14455
+      180         0.150000E+01        0.148165E+01            -1.22340
+      181         0.300000E+00        0.323572E+00             7.85719
+      182         0.150000E+01        0.472849E+01           215.23242
+      183         0.150000E+01        0.148608E+01            -0.92826
+      184         0.300000E+00        0.325396E+00             8.46522
+      185         0.150000E+01        0.461892E+01           207.92796
+      186         0.150000E+01        0.149340E+01            -0.43978
+      187         0.300000E+00        0.326405E+00             8.80167
+      188         0.150000E+01        0.451662E+01           201.10809
+      189         0.150000E+01        0.149423E+01            -0.38482
+      190         0.300000E+00        0.329479E+00             9.82627
+      191         0.150000E+01        0.442185E+01           194.79000
+      192         0.150000E+01        0.148700E+01            -0.86700
+      193         0.300000E+00        0.333811E+00            11.27042
+      194         0.150000E+01        0.433769E+01           189.17912
+      195         0.150000E+01        0.149271E+01            -0.48601
+      196         0.300000E+00        0.333544E+00            11.18141
+      197         0.150000E+01        0.426224E+01           184.14921
+      198         0.150000E+01        0.149096E+01            -0.60263
+      199         0.300000E+00        0.328326E+00             9.44191
+      200         0.150000E+01        0.419379E+01           179.58604
+      201         0.150000E+01        0.149534E+01            -0.31087
+      202         0.300000E+00        0.326810E+00             8.93659
+      203         0.150000E+01        0.414993E+01           176.66217
+      204         0.150000E+01        0.146839E+01            -2.10708
+      205         0.300000E+00        0.314882E+00             4.96069
+      206         0.150000E+01        0.396312E+01           164.20771
+      207         0.150000E+01        0.148598E+01            -0.93495
+      208         0.300000E+00        0.318394E+00             6.13149
+      209         0.150000E+01        0.378515E+01           152.34303
+      210         0.150000E+01        0.149212E+01            -0.52513
+      211         0.300000E+00        0.320914E+00             6.97125
+      212         0.150000E+01        0.361500E+01           140.99996
+      213         0.150000E+01        0.148982E+01            -0.67897
+      214         0.300000E+00        0.341689E+00            13.89635
+      215         0.150000E+01        0.345615E+01           130.41007
+      216         0.150000E+01        0.148755E+01            -0.82986
+      217         0.300000E+00        0.356959E+00            18.98642
+      218         0.150000E+01        0.330864E+01           120.57596
+      219         0.150000E+01        0.148770E+01            -0.81987
+      220         0.300000E+00        0.358020E+00            19.33986
+      221         0.150000E+01        0.317199E+01           111.46593
+      222         0.150000E+01        0.149111E+01            -0.59238
+      223         0.300000E+00        0.368304E+00            22.76811
+      224         0.150000E+01        0.304342E+01           102.89472
+      225         0.150000E+01        0.150023E+01             0.01561
+      226         0.300000E+00        0.367757E+00            22.58560
+ INFO::writing final control vector to x.b
+ INFO::writing prior uncertainty (physical units) to sx.b
+ INFO::runretrieval:start uncertainty analysis on state...
+ 
+ INFO::ua:SVD done with ierr =          0
+ 
+ INFO::runretrieval:...uncertainty analysis on state DONE
+ 
+       Extreme off diagonal correlations
+            Min/Max                 value    i    j
+                Min              -0.03724  116    1
+                Max               0.48916  226  223
+ 
+ INFO::finishdf:target file ***controlvector_prior.nc*** successfully written.
+ INFO::finishdf:target file ***controlvector_post.nc*** successfully written.

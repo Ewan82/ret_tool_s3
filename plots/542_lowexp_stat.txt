@@ -1,0 +1,3 @@
+542_low, 001, sm_cor: -0.05, lai_cor: 0.92 
+542_low, 002, sm_cor: 0.68, lai_cor: 0.95 
+542_low, 000, sm_cor: 0.17, lai_cor: 0.99 

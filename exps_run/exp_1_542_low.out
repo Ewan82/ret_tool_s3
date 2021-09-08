@@ -1,0 +1,637 @@
+which python
+bin/rs_setup.py
+------------------------------
+ Retrieval System Setup properly finished, Retrieval System ready for use!
+------------------------------
+2021-09-06 13:06:41,975 INFO::<module>:: rs_pre.py::PROGRAM START::2021-09-06T13:06:41.975591
+2021-09-06 13:06:41,975 INFO::<module>:: command-line: bin/rs_pre.py pre_general --ctlvec_relunc 0.01 0.5 0.05 0.5 --obs_s1 /home/users/ewanp82/projects/ret_tool_s3/S1/mni_s1_542_low_hv.csv --time_start 20170323 --site_nml /home/users/ewanp82/projects/ret_tool_s3/site_new_test.nml --ctlvec_uncfloor 0.001 3.0 0.1 0.05 --gtol 1.0 --s1_vv_uncfloor 0.004 --s2_uncfloor 0.02 --time_end 20170720 --dynmodunc_inifile /home/users/ewanp82/projects/ret_tool_s3/mod_ini/dynmod_vtight.ini --s1_vh_uncfloor 1e-05 --s2_relunc 0.05 --s1_unc 1.6
+2021-09-06 13:06:41,989 INFO::main:: user selection +++pre_general+++
+2021-09-06 13:06:41,989 INFO::pre_general:: start setup of general retrieval setup...
+2021-09-06 13:06:42,461 INFO::pre_general:: Copied default namelist file ***/home/users/ewanp82/projects/ret_tool_s3/site_new_test.nml*** to current working directory.
+2021-09-06 13:06:42,462 INFO::pre_general:: START reading namelist ***site.nml***...
+2021-09-06 13:06:42,474 INFO::pre_general:: ...reading DONE
+2021-09-06 13:06:42,486 INFO::load_obs_csv:: observation data loaded from file ***/home/users/ewanp82/projects/ret_tool_s3/S1/mni_s1_542_low_hv.csv***
+2021-09-06 13:06:42,488 INFO::load_obs_csv:: detected ntimepts=39 #columns=10 in csv file
+2021-09-06 13:06:42,488 INFO::load_obs_csv:: start reading S1 observations...
+2021-09-06 13:06:42,488 INFO::load_obs_csv:: observational backscatter values are assumed to be in linear units!
+2021-09-06 13:06:42,488 INFO::load_obs_csv:: VH backscatter values read: VH[linear] min/max=0.00383534212597/0.0520015209913
+2021-09-06 13:06:42,488 INFO::load_obs_csv:: VV backscatter values read: VV[linear] min/max=-99999.0/-99999.0
+2021-09-06 13:06:42,488 INFO::load_obs_csv:: assuming S1 observational uncertainty of 1.6 [dB] yields relative uncertainty of 0.376804399913 [linear unit].
+2021-09-06 13:06:42,488 INFO::load_obs_csv:: assuming vv=0.004 vh=1e-05 S1 observational uncertainty floor [linear unit].
+2021-09-06 13:06:42,489 INFO::load_obs_csv:: number of applied uncertainty floor values on VH=0 VV=39
+2021-09-06 13:06:42,489 INFO::load_obs_csv:: determined VH uncertainty in linear units, min/max=0.00144517378824/0.0195944019117
+2021-09-06 13:06:42,489 INFO::load_obs_csv:: determined VV uncertainty in linear units, min/max=0.004/0.004
+2021-09-06 13:06:42,489 INFO::load_obs_csv:: ...reading S1 observations DONE
+2021-09-06 13:06:42,489 INFO::setup_common_schedule:: determined ntpts=39
+2021-09-06 13:06:42,489 INFO::setup_common_schedule:: common schedule yields time-points  S1A=0 S1B=39 S2A=0 S2B=0 other=0
+2021-09-06 13:06:42,489 INFO::_set_priorunc:: applied relative uncertainty 0.01 on lai coefficients.
+2021-09-06 13:06:42,490 INFO::_set_priorunc:: applied relative uncertainty on state vector components, lai_relunc=0.5 canht_relunc=0.05 sm_relunc=0.5
+2021-09-06 13:06:42,490 INFO::_set_priorunc:: uncertainty floor values were applied as follows: lai_uncfloor=3.0 canht_uncfloor=0.1 sm_uncfloor=0.05
+2021-09-06 13:06:42,494 INFO::set_dynmodel:: START reading values on dynamical model uncertainties from ***/home/users/ewanp82/projects/ret_tool_s3/mod_ini/dynmod_vtight.ini***...
+2021-09-06 13:06:42,496 INFO::set_dynmodel:: ...reading DONE
+2021-09-06 13:06:42,496 INFO::pre_general:: ...general retrieval setup DONE
+2021-09-06 13:06:42,497 INFO::pre_general:: START writing input files for retrieval system...
+2021-09-06 13:06:42,497 INFO::ncwrt_retrieval_config:: Start writing configuration file ***retrconfig.nc***...
+2021-09-06 13:06:44,653 INFO::ncwrt_retrieval_config:: ...writing ***retrconfig.nc*** DONE
+2021-09-06 13:06:44,653 INFO::ncwrt_retrieval_prior:: Start writing configuration file ***retrprior.nc***...
+2021-09-06 13:06:50,978 INFO::ncwrt_retrieval_prior:: ...writing ***retrprior.nc*** DONE
+2021-09-06 13:06:50,978 INFO::ncwrt_retrieval_obs_s1:: Start writing configuration file ***obs_s1.nc***...
+2021-09-06 13:06:53,145 INFO::ncwrt_retrieval_obs_s1:: ...writing ***obs_s1.nc*** DONE
+2021-09-06 13:06:53,146 INFO::ncwrt_retrieval_model:: Start writing configuration file ***retrmodel.nc***...
+2021-09-06 13:06:58,259 INFO::ncwrt_retrieval_model:: ...writing ***retrmodel.nc*** DONE
+2021-09-06 13:06:58,259 INFO::wrt_nml_retrieval_control:: Start writing configuration file ***retrctl.nml***...
+2021-09-06 13:06:58,445 INFO::wrt_nml_retrieval_control:: ...writing ***retrctl.nml*** DONE
+2021-09-06 13:06:58,445 INFO::wrt_nml_controlvector_bounds:: Start writing configuration file ***retrctlvecbounds.nml***...
+2021-09-06 13:06:58,752 INFO::wrt_nml_controlvector_bounds:: ...writing ***retrctlvecbounds.nml*** DONE
+2021-09-06 13:06:58,752 INFO::pre_general:: ...writing input files for retrieval system DONE
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/mo_sensimul_s1.o src/sense/mo_sensimul_s1.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/mo_sensimul_s2.o src/semid/mo_sensimul_s2.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/mo_sensimul.o src/simulator/mo_sensimul.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/runretrieval.o driver/runretrieval.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/mo_retrieval.o src/retrieval/mo_retrieval.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/cost.o src/retrieval/cost.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/misfit.o src/retrieval/misfit.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/prior.o src/retrieval/prior.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/retrieval_control.o src/retrieval/retrieval_control.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/DIFFSIZES.o src/derivatives/DIFFSIZES.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/jacobian.o src/retrieval/jacobian.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/ua.o src/retrieval/ua.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/mo_util.o src/support/mo_util.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/fapar.o src/retrieval/fapar.f90
+ar -r lib/libretr.a objs/cost.o objs/misfit.o objs/prior.o objs/mo_retrieval.o objs/retrieval_control.o objs/jacobian.o objs/ua.o objs/fapar.o
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/model.o src/simulator/model.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/price_soil_ftn.o src/semid/price_soil_ftn.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/cost_bw.o src/derivatives/cost_bw.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/cost_fwv.o src/derivatives/cost_fwv.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/ad_support.o src/derivatives/ad_support.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/adBuffer.o src/derivatives/adBuffer.f
+/apps/contrib/jaspy/miniconda_envs/jaspy2.7/m2-4.6.14/envs/jaspy2.7-m2-4.6.14-r20190715/bin/x86_64-conda_cos6-linux-gnu-cc -fPIC -Isrc/derivatives -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe  -c -o objs/adStack.o src/derivatives/adStack.c
+ar -r lib/libderiv.a objs/cost_bw.o objs/cost_fwv.o objs/ad_support.o objs/DIFFSIZES.o objs/adBuffer.o objs/adStack.o
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/prospect.redux.o src/semid/prospect.redux.f
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/semiDbrf.o src/semid/semiDbrf.f
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/semiDbrfe.o src/semid/semiDbrfe.f
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/semiDtools.o src/semid/semiDtools.f
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/simulate.o src/simulator/simulate.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/mapping.o src/simulator/mapping.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/target_operator.o src/simulator/target_operator.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/prospect_interface_ftn.o src/semid/prospect_interface_ftn.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/semiD_ftn.o src/semid/semiD_ftn.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/canopy.o src/sense/canopy.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/core.o src/sense/core.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/dobson85.o src/sense/dobson85.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/ground.o src/sense/ground.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/Oh92.o src/sense/Oh92.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/scatterer.o src/sense/scatterer.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/soil.o src/sense/soil.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/util.o src/sense/util.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/sense.o src/sense/sense.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/init-finish.o src/simulator/init-finish.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/mo_timing.o src/support/mo_timing.f90
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o objs/sensimul_io.o src/simulator/sensimul_io.f90
+ar -r lib/libmodel.a objs/prospect.redux.o objs/semiDbrf.o objs/semiDbrfe.o objs/semiDtools.o objs/mo_sensimul.o objs/simulate.o objs/mapping.o objs/model.o objs/target_operator.o objs/mo_sensimul_s2.o objs/price_soil_ftn.o objs/prospect_interface_ftn.o objs/semiD_ftn.o objs/canopy.o objs/core.o objs/dobson85.o objs/ground.o objs/mo_sensimul_s1.o objs/Oh92.o objs/scatterer.o objs/soil.o objs/util.o objs/sense.o objs/init-finish.o objs/sensimul_io.o
+ar -r lib/libsupport.a objs/mo_timing.o objs/mo_util.o
+make -C lbfgsb ../lib/liblbfgsb-gfortran.a FC="gfortran" FFLAGS="-Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/" LIBNAME="../lib/liblbfgsb-gfortran.a"
+make[1]: Entering directory `/gws/nopw/j04/odanceo/epinnington/sen_syn/542_low_flat_hv_nos2_1/lbfgsb'
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o blas.o blas.f
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o lbfgsb.o lbfgsb.f
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o linpack.o linpack.f
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/  -c -o timer.o timer.f
+ar -r ../lib/liblbfgsb-gfortran.a blas.o lbfgsb.o linpack.o timer.o
+make[1]: Leaving directory `/gws/nopw/j04/odanceo/epinnington/sen_syn/542_low_flat_hv_nos2_1/lbfgsb'
+make -C eispack ../lib/libeis.a FC=gfortran FFLAGS="-Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/" LIBNAME="../lib/libeis.a"
+make[1]: Entering directory `/gws/nopw/j04/odanceo/epinnington/sen_syn/542_low_flat_hv_nos2_1/eispack'
+gfortran -Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/ -c eispack.f90
+ar -r ../lib/libeis.a eispack.o
+make[1]: Leaving directory `/gws/nopw/j04/odanceo/epinnington/sen_syn/542_low_flat_hv_nos2_1/eispack'
+gfortran -o runretrieval.x -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native objs/runretrieval.o lib/libretr.a lib/libderiv.a lib/libmodel.a lib/libsupport.a lib/liblbfgsb-gfortran.a lib/libeis.a -L/usr/lib64/ -lnetcdff -lnetcdf
+./runretrieval.x --no_fapar 2>&1 | tee mk.retrieval.log
+ INFO::retrieval_read_ctl:read settings from file ***retrctl.nml***...
+ INFO::retrieval_read_ctl:...reading done.
+ INFO::use_prior_term: T
+ INFO::use_state_term: T
+ INFO::gradient_tolerance: .10000E+01
+ INFO::priopr_pert: .00000E+00
+ INFO::runretrieval:calling initf...
+ DEBUG::load_ivgeom:ndims= 2
+ INFO::initf:retrieval configuration was read from ***retrconfig.nc***
+ DEBUG::initf:ncrd_retrieval_config has finished, yields:npts=  39 npts_s1=  39 npts_s2=   0
+ INFO::load_sitenml:successfully read site namelist file ***site.nml***
+ INFO::setprior:prior control vector was read from ***retrprior.nc***
+ DEBUG::setprior:ncrd_retrieval_prior terminated successfully
+ INFO::runretrieval:...done.
+ DEBUG::runretrieval:initf yields:n=119 mf= 78
+ INFO::runretrieval:calling initx...
+ INFO::runretrieval:...done.
+ INFO::state_model_set:will be setting-up simple state-model of type "mx(i+1)=a(i+1)*x(i) + b(i+1)"
+ INFO::state_model_set:reading model configuration from file ***retrmodel.nc***...
+ INFO::state_model_set:...reading done.
+ INFO::runretrieval:start optimise...
+ INFO::optimise:load control vector boundary settings by calling initb...
+ INFO::initb:bounds were read from file ***retrctlvecbounds.nml***
+ INFO::initb:applying bounds: lai_coeff_lobound=    0.000 lai_coeff_hibound=    1.000
+ INFO::initb:applying bounds: lai_lobound=    0.001 lai_hibound=   10.000
+ INFO::initb:applying bounds: canht_lobound=    0.001 canht_hibound=    4.500
+ INFO::initb:applying bounds: sm_lobound=    0.001 sm_hibound=    0.500
+ INFO::optimise:...done.
+ INFO::optimise:start optimiser...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =          119     M =            5
+
+At X0         0 variables are exactly at the bounds
+ INFO::getobs:initial loading of observations...
+ INFO::getobs:reading S1 observations from ***obs_s1.nc***
+ INFO::ncrd_obs_vector:dataset ---backscatter--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:dataset ---backscatter_unc--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:s1 detected data fill-values:      39
+ INFO::ncrd_obs_vector:s1 detected no uncertainthy fill-values
+ INFO::getobs:...loading S1 observations done.
+ INFO::getobs:no S2 observations ***obs_s2.nc*** available.
+ INFO::getobs:...initial loading done
+
+At iterate    0    f=  5.58478D+01    |proj g|=  2.83333D+00
+
+At iterate    1    f=  5.50057D+01    |proj g|=  2.83560D+00
+
+At iterate    2    f=  5.30115D+01    |proj g|=  2.83644D+00
+
+At iterate    3    f=  4.98588D+01    |proj g|=  2.84669D+00
+
+At iterate    4    f=  4.91341D+01    |proj g|=  2.85361D+00
+
+At iterate    5    f=  4.82003D+01    |proj g|=  2.83808D+00
+
+At iterate    6    f=  4.67028D+01    |proj g|=  2.85974D+00
+
+At iterate    7    f=  4.52005D+01    |proj g|=  2.86592D+00
+
+At iterate    8    f=  4.29325D+01    |proj g|=  2.86884D+00
+
+At iterate    9    f=  4.20713D+01    |proj g|=  2.87623D+00
+
+At iterate   10    f=  4.09594D+01    |proj g|=  2.85667D+00
+
+At iterate   11    f=  4.02803D+01    |proj g|=  2.84633D+00
+
+At iterate   12    f=  3.94631D+01    |proj g|=  2.85835D+00
+
+At iterate   13    f=  3.88533D+01    |proj g|=  2.95359D+00
+
+At iterate   14    f=  3.78369D+01    |proj g|=  2.85997D+00
+
+At iterate   15    f=  3.72630D+01    |proj g|=  2.85300D+00
+
+At iterate   16    f=  3.69149D+01    |proj g|=  2.85805D+00
+
+At iterate   17    f=  3.65098D+01    |proj g|=  2.98734D+00
+
+At iterate   18    f=  3.60271D+01    |proj g|=  2.86498D+00
+
+At iterate   19    f=  3.57016D+01    |proj g|=  2.85914D+00
+
+At iterate   20    f=  3.52388D+01    |proj g|=  3.00001D+00
+
+At iterate   21    f=  3.50679D+01    |proj g|=  2.93650D+00
+
+At iterate   22    f=  3.48413D+01    |proj g|=  2.79525D+00
+
+At iterate   23    f=  3.46986D+01    |proj g|=  1.67514D+00
+
+At iterate   24    f=  3.44953D+01    |proj g|=  2.80079D+00
+
+At iterate   25    f=  3.42072D+01    |proj g|=  3.03171D+00
+
+At iterate   26    f=  3.38272D+01    |proj g|=  2.98667D+00
+
+At iterate   27    f=  3.33967D+01    |proj g|=  3.06323D+00
+
+At iterate   28    f=  3.32290D+01    |proj g|=  3.07498D+00
+
+At iterate   29    f=  3.30008D+01    |proj g|=  2.89056D+00
+
+At iterate   30    f=  3.28280D+01    |proj g|=  2.88912D+00
+
+At iterate   31    f=  3.25843D+01    |proj g|=  2.88340D+00
+
+At iterate   32    f=  3.23055D+01    |proj g|=  3.10056D+00
+
+At iterate   33    f=  3.20478D+01    |proj g|=  3.12206D+00
+
+At iterate   34    f=  3.19403D+01    |proj g|=  2.52825D+00
+
+At iterate   35    f=  3.18362D+01    |proj g|=  2.74020D+00
+
+At iterate   36    f=  3.17348D+01    |proj g|=  3.12240D+00
+
+At iterate   37    f=  3.15737D+01    |proj g|=  3.03436D+00
+
+At iterate   38    f=  3.11624D+01    |proj g|=  3.03941D+00
+
+At iterate   39    f=  3.10661D+01    |proj g|=  2.93030D+00
+
+At iterate   40    f=  3.09803D+01    |proj g|=  2.80997D+00
+
+At iterate   41    f=  3.08692D+01    |proj g|=  2.96401D+00
+
+At iterate   42    f=  3.08212D+01    |proj g|=  3.02318D+00
+
+At iterate   43    f=  3.07419D+01    |proj g|=  2.79895D+00
+
+At iterate   44    f=  3.06897D+01    |proj g|=  2.38907D+00
+
+At iterate   45    f=  3.06234D+01    |proj g|=  2.96708D+00
+
+At iterate   46    f=  3.05029D+01    |proj g|=  2.99533D+00
+
+At iterate   47    f=  3.04402D+01    |proj g|=  2.99587D+00
+
+At iterate   48    f=  3.03578D+01    |proj g|=  3.00347D+00
+
+At iterate   49    f=  3.02633D+01    |proj g|=  3.00634D+00
+
+At iterate   50    f=  3.01669D+01    |proj g|=  3.09735D+00
+
+At iterate   51    f=  3.01217D+01    |proj g|=  3.17381D+00
+
+At iterate   52    f=  3.00061D+01    |proj g|=  3.01136D+00
+
+At iterate   53    f=  2.99684D+01    |proj g|=  2.17823D+00
+
+At iterate   54    f=  2.99385D+01    |proj g|=  1.89345D+00
+
+At iterate   55    f=  2.98993D+01    |proj g|=  3.17329D+00
+
+At iterate   56    f=  2.98568D+01    |proj g|=  1.96253D+00
+
+At iterate   57    f=  2.98375D+01    |proj g|=  1.13678D+00
+
+At iterate   58    f=  2.98115D+01    |proj g|=  1.36652D+00
+
+At iterate   59    f=  2.97700D+01    |proj g|=  2.27350D+00
+
+At iterate   60    f=  2.97490D+01    |proj g|=  3.18067D+00
+
+At iterate   61    f=  2.97028D+01    |proj g|=  1.49025D+00
+
+At iterate   62    f=  2.96833D+01    |proj g|=  1.64627D+00
+
+At iterate   63    f=  2.96519D+01    |proj g|=  2.32152D+00
+
+At iterate   64    f=  2.96281D+01    |proj g|=  3.04232D+00
+
+At iterate   65    f=  2.95614D+01    |proj g|=  2.76060D+00
+
+At iterate   66    f=  2.95262D+01    |proj g|=  1.21308D+00
+
+At iterate   67    f=  2.94996D+01    |proj g|=  1.66558D+00
+
+At iterate   68    f=  2.94595D+01    |proj g|=  2.26210D+00
+
+At iterate   69    f=  2.94378D+01    |proj g|=  3.00834D+00
+
+At iterate   70    f=  2.94042D+01    |proj g|=  1.19519D+00
+
+At iterate   71    f=  2.93888D+01    |proj g|=  1.56138D+00
+
+At iterate   72    f=  2.93514D+01    |proj g|=  3.00457D+00
+
+At iterate   73    f=  2.93461D+01    |proj g|=  3.18168D+00
+
+At iterate   74    f=  2.92982D+01    |proj g|=  1.45740D+00
+
+At iterate   75    f=  2.92861D+01    |proj g|=  9.50048D-01
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+  119     75     81    114     0     0   9.500D-01   2.929D+01
+  F =   29.286130967628672     
+
+CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL            
+
+ Cauchy                time 7.550E-04 seconds.
+ Subspace minimization time 8.570E-04 seconds.
+ Line search           time 3.120E-02 seconds.
+
+ Total User time 3.789E-02 seconds.
+
+ INFO::optimise:...optimiser finished.
+ INFO::runretrieval:...optimise DONE
+ INFO::runretrieval::opti_succeed: T
+ 
+        i                Prior           Posterior          Change [%]
+ 
+        1         0.990000E-01        0.989911E-01            -0.00897
+        2         0.990000E-01        0.989911E-01            -0.00897
+        3         0.150000E+01        0.452215E+00           -69.85236
+        4         0.150000E+01        0.149849E+01            -0.10063
+        5         0.300000E+00        0.349134E+00            16.37793
+        6         0.150000E+01        0.451883E+00           -69.87449
+        7         0.150000E+01        0.149788E+01            -0.14135
+        8         0.300000E+00        0.360008E+00            20.00282
+        9         0.150000E+01        0.455213E+00           -69.65249
+       10         0.150000E+01        0.149822E+01            -0.11862
+       11         0.300000E+00        0.360081E+00            20.02696
+       12         0.150000E+01        0.460207E+00           -69.31950
+       13         0.150000E+01        0.149781E+01            -0.14618
+       14         0.300000E+00        0.366357E+00            22.11902
+       15         0.150000E+01        0.467451E+00           -68.83663
+       16         0.150000E+01        0.149774E+01            -0.15048
+       17         0.300000E+00        0.366319E+00            22.10632
+       18         0.150000E+01        0.481002E+00           -67.93318
+       19         0.150000E+01        0.149758E+01            -0.16152
+       20         0.300000E+00        0.358648E+00            19.54937
+       21         0.150000E+01        0.498983E+00           -66.73449
+       22         0.150000E+01        0.149804E+01            -0.13090
+       23         0.300000E+00        0.338954E+00            12.98463
+       24         0.150000E+01        0.520884E+00           -65.27438
+       25         0.150000E+01        0.149772E+01            -0.15229
+       26         0.300000E+00        0.313137E+00             4.37903
+       27         0.150000E+01        0.550193E+00           -63.32044
+       28         0.150000E+01        0.150146E+01             0.09725
+       29         0.300000E+00        0.309669E+00             3.22287
+       30         0.150000E+01        0.633851E+00           -57.74328
+       31         0.150000E+01        0.149970E+01            -0.02033
+       32         0.300000E+00        0.287474E+00            -4.17530
+       33         0.150000E+01        0.656458E+00           -56.23611
+       34         0.150000E+01        0.150248E+01             0.16556
+       35         0.300000E+00        0.276015E+00            -7.99509
+       36         0.150000E+01        0.670066E+00           -55.32896
+       37         0.150000E+01        0.149823E+01            -0.11800
+       38         0.300000E+00        0.319361E+00             6.45358
+       39         0.150000E+01        0.686891E+00           -54.20727
+       40         0.150000E+01        0.149678E+01            -0.21440
+       41         0.300000E+00        0.344302E+00            14.76735
+       42         0.150000E+01        0.709777E+00           -52.68156
+       43         0.150000E+01        0.149683E+01            -0.21104
+       44         0.300000E+00        0.343550E+00            14.51678
+       45         0.150000E+01        0.818930E+00           -45.40465
+       46         0.150000E+01        0.149828E+01            -0.11490
+       47         0.300000E+00        0.193509E+00           -35.49716
+       48         0.150000E+01        0.848427E+00           -43.43818
+       49         0.150000E+01        0.151203E+01             0.80220
+       50         0.300000E+00        0.187933E+00           -37.35581
+       51         0.150000E+01        0.854893E+00           -43.00716
+       52         0.150000E+01        0.149860E+01            -0.09329
+       53         0.300000E+00        0.250668E+00           -16.44410
+       54         0.150000E+01        0.892330E+00           -40.51132
+       55         0.150000E+01        0.149794E+01            -0.13764
+       56         0.300000E+00        0.325129E+00             8.37627
+       57         0.150000E+01        0.904341E+00           -39.71059
+       58         0.150000E+01        0.149690E+01            -0.20684
+       59         0.300000E+00        0.327482E+00             9.16061
+       60         0.150000E+01        0.924563E+00           -38.36248
+       61         0.150000E+01        0.149940E+01            -0.04021
+       62         0.300000E+00        0.325839E+00             8.61293
+       63         0.150000E+01        0.940333E+00           -37.31115
+       64         0.150000E+01        0.149858E+01            -0.09486
+       65         0.300000E+00        0.306430E+00             2.14343
+       66         0.150000E+01        0.956143E+00           -36.25710
+       67         0.150000E+01        0.150253E+01             0.16888
+       68         0.300000E+00        0.273727E+00            -8.75772
+       69         0.150000E+01        0.973781E+00           -35.08129
+       70         0.150000E+01        0.149765E+01            -0.15699
+       71         0.300000E+00        0.317126E+00             5.70867
+       72         0.150000E+01        0.984117E+00           -34.39219
+       73         0.150000E+01        0.150460E+01             0.30672
+       74         0.300000E+00        0.287099E+00            -4.30017
+       75         0.150000E+01        0.980578E+00           -34.62811
+       76         0.150000E+01        0.149692E+01            -0.20556
+       77         0.300000E+00        0.289938E+00            -3.35384
+       78         0.150000E+01        0.981647E+00           -34.55686
+       79         0.150000E+01        0.149955E+01            -0.02980
+       80         0.300000E+00        0.298429E+00            -0.52355
+       81         0.150000E+01        0.100320E+01           -33.12014
+       82         0.150000E+01        0.151197E+01             0.79768
+       83         0.300000E+00        0.806469E-01           -73.11771
+       84         0.150000E+01        0.993356E+00           -33.77628
+       85         0.150000E+01        0.150004E+01             0.00264
+       86         0.300000E+00        0.290327E+00            -3.22427
+       87         0.150000E+01        0.996572E+00           -33.56189
+       88         0.150000E+01        0.150306E+01             0.20405
+       89         0.300000E+00        0.278465E+00            -7.17822
+       90         0.150000E+01        0.989789E+00           -34.01409
+       91         0.150000E+01        0.149698E+01            -0.20125
+       92         0.300000E+00        0.310037E+00             3.34560
+       93         0.150000E+01        0.981441E+00           -34.57062
+       94         0.150000E+01        0.149719E+01            -0.18739
+       95         0.300000E+00        0.280015E+00            -6.66171
+       96         0.150000E+01        0.984029E+00           -34.39807
+       97         0.150000E+01        0.150634E+01             0.42261
+       98         0.300000E+00        0.223437E+00           -25.52084
+       99         0.150000E+01        0.973727E+00           -35.08484
+      100         0.150000E+01        0.149875E+01            -0.08312
+      101         0.300000E+00        0.243376E+00           -18.87470
+      102         0.150000E+01        0.969032E+00           -35.39785
+      103         0.150000E+01        0.150911E+01             0.60738
+      104         0.300000E+00        0.205467E+00           -31.51097
+      105         0.150000E+01        0.948568E+00           -36.76213
+      106         0.150000E+01        0.149731E+01            -0.17950
+      107         0.300000E+00        0.292665E+00            -2.44506
+      108         0.150000E+01        0.934318E+00           -37.71212
+      109         0.150000E+01        0.149589E+01            -0.27408
+      110         0.300000E+00        0.337407E+00            12.46901
+      111         0.150000E+01        0.928291E+00           -38.11394
+      112         0.150000E+01        0.149608E+01            -0.26164
+      113         0.300000E+00        0.356387E+00            18.79568
+      114         0.150000E+01        0.925652E+00           -38.28986
+      115         0.150000E+01        0.149649E+01            -0.23422
+      116         0.300000E+00        0.361963E+00            20.65435
+      117         0.150000E+01        0.926393E+00           -38.24050
+      118         0.150000E+01        0.149682E+01            -0.21221
+      119         0.300000E+00        0.359437E+00            19.81218
+ INFO::writing final control vector to x.b
+ INFO::writing prior uncertainty (physical units) to sx.b
+ INFO::runretrieval:start uncertainty analysis on state...
+ 
+ INFO::ua:SVD done with ierr =          0
+ 
+ INFO::runretrieval:...uncertainty analysis on state DONE
+ 
+       Extreme off diagonal correlations
+            Min/Max                 value    i    j
+                Min              -0.01424   90   88
+                Max               0.41305   11    8
+ 
+ INFO::finishdf:target file ***controlvector_prior.nc*** successfully written.
+ INFO::finishdf:target file ***controlvector_post.nc*** successfully written.
+('exp_list length: ', '3')
+/home/users/ewanp82/projects/ret_tool_s3
+0.01
+0.5
+0.05
+0.5
+str, obs_s1
+str, time_start
+str, site_nml
+0.001
+3.0
+0.1
+0.05
+float, gtol
+float, s1_vv_uncfloor
+float, s2_uncfloor
+str, time_end
+str, dynmodunc_inifile
+float, s1_vh_uncfloor
+float, s2_relunc
+float, s1_unc
+/gws/nopw/j04/odanceo/epinnington/sen_syn/542_low_flat_hv_nos2_1
+<type 'netCDF4._netCDF4.Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    institution: The Inversion Lab, Hamburg, Germany
+    date_created: 20210906T13:12:22+01:00
+    optimisation_tag: SUCCESSFUL
+    dimensions(sizes): nparam_s1(2), npoints(39)
+    variables(dimensions): float64 [4mtime[0m(npoints), int32 [4msim_typ[0m(npoints), float64 [4mlaicoeff[0m(nparam_s1), float64 [4mlaicoeff_unc[0m(nparam_s1), float64 [4mlai[0m(npoints), float64 [4mcanht[0m(npoints), float64 [4msm[0m(npoints), float64 [4mlai_unc[0m(npoints), float64 [4mcanht_unc[0m(npoints), float64 [4msm_unc[0m(npoints)
+    groups: 
+
+[datetime.datetime(2017, 3, 23, 5, 26)
+ datetime.datetime(2017, 3, 25, 17, 6)
+ datetime.datetime(2017, 3, 26, 16, 58)
+ datetime.datetime(2017, 3, 29, 5, 26)
+ datetime.datetime(2017, 3, 30, 5, 17)
+ datetime.datetime(2017, 3, 31, 17, 6)
+ datetime.datetime(2017, 4, 4, 5, 26) datetime.datetime(2017, 4, 6, 17, 6)
+ datetime.datetime(2017, 4, 7, 16, 58)
+ datetime.datetime(2017, 4, 12, 17, 6)
+ datetime.datetime(2017, 4, 16, 5, 26)
+ datetime.datetime(2017, 4, 19, 16, 58)
+ datetime.datetime(2017, 4, 23, 5, 17)
+ datetime.datetime(2017, 4, 24, 17, 6)
+ datetime.datetime(2017, 4, 30, 17, 6)
+ datetime.datetime(2017, 5, 1, 16, 58)
+ datetime.datetime(2017, 5, 4, 5, 26)
+ datetime.datetime(2017, 5, 10, 5, 26)
+ datetime.datetime(2017, 5, 12, 17, 6)
+ datetime.datetime(2017, 5, 13, 16, 58)
+ datetime.datetime(2017, 5, 16, 5, 26)
+ datetime.datetime(2017, 5, 18, 17, 6)
+ datetime.datetime(2017, 5, 24, 17, 6)
+ datetime.datetime(2017, 5, 28, 5, 26)
+ datetime.datetime(2017, 5, 29, 5, 17)
+ datetime.datetime(2017, 5, 30, 17, 6)
+ datetime.datetime(2017, 6, 5, 17, 6)
+ datetime.datetime(2017, 6, 11, 17, 6)
+ datetime.datetime(2017, 6, 16, 5, 17)
+ datetime.datetime(2017, 6, 17, 17, 6)
+ datetime.datetime(2017, 6, 23, 17, 6)
+ datetime.datetime(2017, 6, 27, 5, 26)
+ datetime.datetime(2017, 6, 29, 17, 6)
+ datetime.datetime(2017, 7, 3, 5, 26) datetime.datetime(2017, 7, 5, 17, 6)
+ datetime.datetime(2017, 7, 10, 5, 17)
+ datetime.datetime(2017, 7, 11, 17, 6)
+ datetime.datetime(2017, 7, 15, 5, 26)
+ datetime.datetime(2017, 7, 17, 17, 6)]
+[    0   319   462   825   968  1183  1689  2047  2190  2911  3417  3918
+  4418  4633  5497  5640  6003  6867  7225  7368  7731  8089  8953  9459
+  9602  9817 10681 11545 12194 12409 13273 13779 14137 14643 15001 15650
+ 15865 16371 16729]
+/gws/nopw/j04/odanceo/epinnington/sen_syn/542_low_flat_hv_nos2_1
+<type 'netCDF4._netCDF4.Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    institution: The Inversion Lab, Hamburg, Germany
+    date_created: 20210906T13:12:22+01:00
+    optimisation_tag: SUCCESSFUL
+    dimensions(sizes): nparam_s1(2), npoints(39)
+    variables(dimensions): float64 [4mtime[0m(npoints), int32 [4msim_typ[0m(npoints), float64 [4mlaicoeff[0m(nparam_s1), float64 [4mlaicoeff_unc[0m(nparam_s1), float64 [4mlai[0m(npoints), float64 [4mcanht[0m(npoints), float64 [4msm[0m(npoints), float64 [4mlai_unc[0m(npoints), float64 [4mcanht_unc[0m(npoints), float64 [4msm_unc[0m(npoints)
+    groups: 
+
+[datetime.datetime(2017, 3, 23, 5, 26)
+ datetime.datetime(2017, 3, 25, 17, 6)
+ datetime.datetime(2017, 3, 26, 16, 58)
+ datetime.datetime(2017, 3, 29, 5, 26)
+ datetime.datetime(2017, 3, 30, 5, 17)
+ datetime.datetime(2017, 3, 31, 17, 6)
+ datetime.datetime(2017, 4, 4, 5, 26) datetime.datetime(2017, 4, 6, 17, 6)
+ datetime.datetime(2017, 4, 7, 16, 58)
+ datetime.datetime(2017, 4, 12, 17, 6)
+ datetime.datetime(2017, 4, 16, 5, 26)
+ datetime.datetime(2017, 4, 19, 16, 58)
+ datetime.datetime(2017, 4, 23, 5, 17)
+ datetime.datetime(2017, 4, 24, 17, 6)
+ datetime.datetime(2017, 4, 30, 17, 6)
+ datetime.datetime(2017, 5, 1, 16, 58)
+ datetime.datetime(2017, 5, 4, 5, 26)
+ datetime.datetime(2017, 5, 10, 5, 26)
+ datetime.datetime(2017, 5, 12, 17, 6)
+ datetime.datetime(2017, 5, 13, 16, 58)
+ datetime.datetime(2017, 5, 16, 5, 26)
+ datetime.datetime(2017, 5, 18, 17, 6)
+ datetime.datetime(2017, 5, 24, 17, 6)
+ datetime.datetime(2017, 5, 28, 5, 26)
+ datetime.datetime(2017, 5, 29, 5, 17)
+ datetime.datetime(2017, 5, 30, 17, 6)
+ datetime.datetime(2017, 6, 5, 17, 6)
+ datetime.datetime(2017, 6, 11, 17, 6)
+ datetime.datetime(2017, 6, 16, 5, 17)
+ datetime.datetime(2017, 6, 17, 17, 6)
+ datetime.datetime(2017, 6, 23, 17, 6)
+ datetime.datetime(2017, 6, 27, 5, 26)
+ datetime.datetime(2017, 6, 29, 17, 6)
+ datetime.datetime(2017, 7, 3, 5, 26) datetime.datetime(2017, 7, 5, 17, 6)
+ datetime.datetime(2017, 7, 10, 5, 17)
+ datetime.datetime(2017, 7, 11, 17, 6)
+ datetime.datetime(2017, 7, 15, 5, 26)
+ datetime.datetime(2017, 7, 17, 17, 6)]
+/gws/nopw/j04/odanceo/epinnington/sen_syn/542_low_flat_hv_nos2_1
+<type 'netCDF4._netCDF4.Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    institution: The Inversion Lab, Hamburg, Germany
+    date_created: 20210906T13:12:22+01:00
+    optimisation_tag: SUCCESSFUL
+    dimensions(sizes): nparam_s1(2), npoints(39)
+    variables(dimensions): float64 [4mtime[0m(npoints), int32 [4msim_typ[0m(npoints), float64 [4mlaicoeff[0m(nparam_s1), float64 [4mlaicoeff_unc[0m(nparam_s1), float64 [4mlai[0m(npoints), float64 [4mcanht[0m(npoints), float64 [4msm[0m(npoints), float64 [4mlai_unc[0m(npoints), float64 [4mcanht_unc[0m(npoints), float64 [4msm_unc[0m(npoints)
+    groups: 
+
+[datetime.datetime(2017, 3, 23, 5, 26)
+ datetime.datetime(2017, 3, 25, 17, 6)
+ datetime.datetime(2017, 3, 26, 16, 58)
+ datetime.datetime(2017, 3, 29, 5, 26)
+ datetime.datetime(2017, 3, 30, 5, 17)
+ datetime.datetime(2017, 3, 31, 17, 6)
+ datetime.datetime(2017, 4, 4, 5, 26) datetime.datetime(2017, 4, 6, 17, 6)
+ datetime.datetime(2017, 4, 7, 16, 58)
+ datetime.datetime(2017, 4, 12, 17, 6)
+ datetime.datetime(2017, 4, 16, 5, 26)
+ datetime.datetime(2017, 4, 19, 16, 58)
+ datetime.datetime(2017, 4, 23, 5, 17)
+ datetime.datetime(2017, 4, 24, 17, 6)
+ datetime.datetime(2017, 4, 30, 17, 6)
+ datetime.datetime(2017, 5, 1, 16, 58)
+ datetime.datetime(2017, 5, 4, 5, 26)
+ datetime.datetime(2017, 5, 10, 5, 26)
+ datetime.datetime(2017, 5, 12, 17, 6)
+ datetime.datetime(2017, 5, 13, 16, 58)
+ datetime.datetime(2017, 5, 16, 5, 26)
+ datetime.datetime(2017, 5, 18, 17, 6)
+ datetime.datetime(2017, 5, 24, 17, 6)
+ datetime.datetime(2017, 5, 28, 5, 26)
+ datetime.datetime(2017, 5, 29, 5, 17)
+ datetime.datetime(2017, 5, 30, 17, 6)
+ datetime.datetime(2017, 6, 5, 17, 6)
+ datetime.datetime(2017, 6, 11, 17, 6)
+ datetime.datetime(2017, 6, 16, 5, 17)
+ datetime.datetime(2017, 6, 17, 17, 6)
+ datetime.datetime(2017, 6, 23, 17, 6)
+ datetime.datetime(2017, 6, 27, 5, 26)
+ datetime.datetime(2017, 6, 29, 17, 6)
+ datetime.datetime(2017, 7, 3, 5, 26) datetime.datetime(2017, 7, 5, 17, 6)
+ datetime.datetime(2017, 7, 10, 5, 17)
+ datetime.datetime(2017, 7, 11, 17, 6)
+ datetime.datetime(2017, 7, 15, 5, 26)
+ datetime.datetime(2017, 7, 17, 17, 6)]
+ran experiment 1

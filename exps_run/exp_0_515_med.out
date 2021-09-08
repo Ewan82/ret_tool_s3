@@ -1,0 +1,751 @@
+which python
+bin/rs_setup.py
+------------------------------
+ Retrieval System Setup properly finished, Retrieval System ready for use!
+------------------------------
+2021-09-06 11:16:12,409 INFO::<module>:: rs_pre.py::PROGRAM START::2021-09-06T11:16:12.409392
+2021-09-06 11:16:12,409 INFO::<module>:: command-line: bin/rs_pre.py pre_general --obs_s2 /home/users/ewanp82/projects/ret_tool_s3/S2/mni_s2_515_med_b4b5b6b7b8b8a.csv --ctlvec_relunc 0.01 0.5 0.05 0.5 --obs_s1 /home/users/ewanp82/projects/ret_tool_s3/S1/mni_s1_515_med_hv.csv --time_start 20170608 --site_nml /home/users/ewanp82/projects/ret_tool_s3/site_new_test.nml --ctlvec_uncfloor 0.001 3.0 0.1 0.05 --gtol 1.0 --s1_vv_uncfloor 0.004 --s2_uncfloor 0.02 --time_end 20170922 --dynmodunc_inifile /home/users/ewanp82/projects/ret_tool_s3/mod_ini/dynmod_vtight.ini --s1_vh_uncfloor 1e-05 --s2_relunc 0.05 --s1_unc 1.6
+2021-09-06 11:16:12,420 INFO::main:: user selection +++pre_general+++
+2021-09-06 11:16:12,421 INFO::pre_general:: start setup of general retrieval setup...
+2021-09-06 11:16:12,873 INFO::pre_general:: Copied default namelist file ***/home/users/ewanp82/projects/ret_tool_s3/site_new_test.nml*** to current working directory.
+2021-09-06 11:16:12,873 INFO::pre_general:: START reading namelist ***site.nml***...
+2021-09-06 11:16:12,881 INFO::pre_general:: ...reading DONE
+2021-09-06 11:16:12,892 INFO::load_obs_csv:: observation data loaded from file ***/home/users/ewanp82/projects/ret_tool_s3/S1/mni_s1_515_med_hv.csv***
+2021-09-06 11:16:12,893 INFO::load_obs_csv:: detected ntimepts=55 #columns=10 in csv file
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: start reading S1 observations...
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: observational backscatter values are assumed to be in linear units!
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: VH backscatter values read: VH[linear] min/max=0.0153434295207/0.0644249767065
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: VV backscatter values read: VV[linear] min/max=-99999.0/-99999.0
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: assuming S1 observational uncertainty of 1.6 [dB] yields relative uncertainty of 0.376804399913 [linear unit].
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: assuming vv=0.004 vh=1e-05 S1 observational uncertainty floor [linear unit].
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: number of applied uncertainty floor values on VH=0 VV=54
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: determined VH uncertainty in linear units, min/max=0.00578147175316/0.0242756146873
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: determined VV uncertainty in linear units, min/max=0.004/0.004
+2021-09-06 11:16:12,894 INFO::load_obs_csv:: ...reading S1 observations DONE
+2021-09-06 11:16:12,897 INFO::load_obs_csv:: observation data loaded from file ***/home/users/ewanp82/projects/ret_tool_s3/S2/mni_s2_515_med_b4b5b6b7b8b8a.csv***
+2021-09-06 11:16:12,897 INFO::load_obs_csv:: detected ntimepts=12 #columns=21 in csv file
+2021-09-06 11:16:12,897 INFO::load_obs_csv:: start reading S2 observations...
+2021-09-06 11:16:12,897 WARNING::load_obs_csv:: detected negative BRF values: nneg=77. These will be set to fill-value!
+2021-09-06 11:16:12,897 INFO::load_obs_csv:: BRF uncertainty is derived by applying 0.05 relative uncertainty, and an uncertainty floor value of 0.02
+2021-09-06 11:16:12,897 INFO::load_obs_csv:: ...reading S2 observations DONE
+2021-09-06 11:16:12,897 INFO::setup_common_schedule:: determined ntpts=65
+2021-09-06 11:16:12,899 INFO::setup_common_schedule:: common schedule yields time-points  S1A=0 S1B=54 S2A=0 S2B=11 other=0
+2021-09-06 11:16:12,899 INFO::_set_priorunc:: applied relative uncertainty 0.01 on lai coefficients.
+2021-09-06 11:16:12,899 INFO::_set_priorunc:: applied relative uncertainty on state vector components, lai_relunc=0.5 canht_relunc=0.05 sm_relunc=0.5
+2021-09-06 11:16:12,899 INFO::_set_priorunc:: uncertainty floor values were applied as follows: lai_uncfloor=3.0 canht_uncfloor=0.1 sm_uncfloor=0.05
+2021-09-06 11:16:12,903 INFO::set_dynmodel:: START reading values on dynamical model uncertainties from ***/home/users/ewanp82/projects/ret_tool_s3/mod_ini/dynmod_vtight.ini***...
+2021-09-06 11:16:12,904 INFO::set_dynmodel:: ...reading DONE
+2021-09-06 11:16:12,904 INFO::pre_general:: ...general retrieval setup DONE
+2021-09-06 11:16:12,904 INFO::pre_general:: START writing input files for retrieval system...
+2021-09-06 11:16:12,904 INFO::ncwrt_retrieval_config:: Start writing configuration file ***retrconfig.nc***...
+2021-09-06 11:16:14,612 INFO::ncwrt_retrieval_config:: ...writing ***retrconfig.nc*** DONE
+2021-09-06 11:16:14,613 INFO::ncwrt_retrieval_prior:: Start writing configuration file ***retrprior.nc***...
+2021-09-06 11:16:19,641 INFO::ncwrt_retrieval_prior:: ...writing ***retrprior.nc*** DONE
+2021-09-06 11:16:19,641 INFO::ncwrt_retrieval_obs_s1:: Start writing configuration file ***obs_s1.nc***...
+2021-09-06 11:16:22,738 INFO::ncwrt_retrieval_obs_s1:: ...writing ***obs_s1.nc*** DONE
+2021-09-06 11:16:22,739 INFO::ncwrt_retrieval_obs_s2:: Start writing configuration file ***obs_s2.nc***...
+2021-09-06 11:16:24,961 INFO::ncwrt_retrieval_obs_s2:: ...writing ***obs_s2.nc*** DONE
+2021-09-06 11:16:24,961 INFO::ncwrt_retrieval_model:: Start writing configuration file ***retrmodel.nc***...
+2021-09-06 11:16:30,089 INFO::ncwrt_retrieval_model:: ...writing ***retrmodel.nc*** DONE
+2021-09-06 11:16:30,090 INFO::wrt_nml_retrieval_control:: Start writing configuration file ***retrctl.nml***...
+2021-09-06 11:16:30,409 INFO::wrt_nml_retrieval_control:: ...writing ***retrctl.nml*** DONE
+2021-09-06 11:16:30,409 INFO::wrt_nml_controlvector_bounds:: Start writing configuration file ***retrctlvecbounds.nml***...
+2021-09-06 11:16:30,589 INFO::wrt_nml_controlvector_bounds:: ...writing ***retrctlvecbounds.nml*** DONE
+2021-09-06 11:16:30,589 INFO::pre_general:: ...writing input files for retrieval system DONE
+make -C lbfgsb ../lib/liblbfgsb-gfortran.a FC="gfortran" FFLAGS="-Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/" LIBNAME="../lib/liblbfgsb-gfortran.a"
+make[1]: Entering directory `/gws/nopw/j04/odanceo/epinnington/sen_syn/515_med_flat_hv_b4b5b6b7b8b8a_0/lbfgsb'
+make[1]: `../lib/liblbfgsb-gfortran.a' is up to date.
+make[1]: Leaving directory `/gws/nopw/j04/odanceo/epinnington/sen_syn/515_med_flat_hv_b4b5b6b7b8b8a_0/lbfgsb'
+make -C eispack ../lib/libeis.a FC=gfortran FFLAGS="-Wall -ffixed-line-length-132 -fdefault-real-8 -fdefault-double-8 -I/usr/include -Iobjs -Jobjs -O3 -funroll-loops -floop-block -ftree-loop-distribution -march=native -I/usr/lib64/gfortran/modules/" LIBNAME="../lib/libeis.a"
+make[1]: Entering directory `/gws/nopw/j04/odanceo/epinnington/sen_syn/515_med_flat_hv_b4b5b6b7b8b8a_0/eispack'
+make[1]: `../lib/libeis.a' is up to date.
+make[1]: Leaving directory `/gws/nopw/j04/odanceo/epinnington/sen_syn/515_med_flat_hv_b4b5b6b7b8b8a_0/eispack'
+./runretrieval.x --no_fapar 2>&1 | tee mk.retrieval.log
+ INFO::retrieval_read_ctl:read settings from file ***retrctl.nml***...
+ INFO::retrieval_read_ctl:...reading done.
+ INFO::use_prior_term: T
+ INFO::use_state_term: T
+ INFO::gradient_tolerance: .10000E+01
+ INFO::priopr_pert: .00000E+00
+ INFO::runretrieval:calling initf...
+ DEBUG::load_ivgeom:ndims= 2
+ INFO::initf:retrieval configuration was read from ***retrconfig.nc***
+ DEBUG::initf:ncrd_retrieval_config has finished, yields:npts=  65 npts_s1=  54 npts_s2=  11
+ INFO::load_sitenml:successfully read site namelist file ***site.nml***
+ INFO::setprior:prior control vector was read from ***retrprior.nc***
+ DEBUG::setprior:ncrd_retrieval_prior terminated successfully
+ INFO::runretrieval:...done.
+ DEBUG::runretrieval:initf yields:n=197 mf=251
+ INFO::runretrieval:calling initx...
+ INFO::runretrieval:...done.
+ INFO::state_model_set:will be setting-up simple state-model of type "mx(i+1)=a(i+1)*x(i) + b(i+1)"
+ INFO::state_model_set:reading model configuration from file ***retrmodel.nc***...
+ INFO::state_model_set:...reading done.
+ INFO::runretrieval:start optimise...
+ INFO::optimise:load control vector boundary settings by calling initb...
+ INFO::initb:bounds were read from file ***retrctlvecbounds.nml***
+ INFO::initb:applying bounds: lai_coeff_lobound=    0.000 lai_coeff_hibound=    1.000
+ INFO::initb:applying bounds: lai_lobound=    0.001 lai_hibound=   10.000
+ INFO::initb:applying bounds: canht_lobound=    0.001 canht_hibound=    4.500
+ INFO::initb:applying bounds: sm_lobound=    0.001 sm_hibound=    0.500
+ INFO::optimise:...done.
+ INFO::optimise:start optimiser...
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =          197     M =            5
+
+At X0         0 variables are exactly at the bounds
+ INFO::getobs:initial loading of observations...
+ INFO::getobs:reading S1 observations from ***obs_s1.nc***
+ INFO::ncrd_obs_vector:dataset ---backscatter--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:dataset ---backscatter_unc--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:s1 detected data fill-values:      54
+ INFO::ncrd_obs_vector:s1 detected no uncertainthy fill-values
+ INFO::getobs:...loading S1 observations done.
+ INFO::getobs:reading S2 observations from ***obs_s2.nc***
+ INFO::ncrd_obs_vector:dataset ---brf--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:dataset ---brf_unc--- detected fill-value:-99999.00000000
+ INFO::ncrd_obs_vector:s2 detected data fill-values:      77
+ INFO::ncrd_obs_vector:s2 detected unc. fill-values:      77
+ INFO::getobs:...loading observations done.
+ INFO::getobs:...initial loading done
+
+At iterate    0    f=  1.49790D+03    |proj g|=  2.83333D+00
+
+At iterate    1    f=  1.36573D+03    |proj g|=  2.85308D+00
+
+At iterate    2    f=  1.26473D+03    |proj g|=  2.85793D+00
+
+At iterate    3    f=  1.15845D+03    |proj g|=  2.90313D+00
+
+At iterate    4    f=  1.09146D+03    |proj g|=  2.92386D+00
+
+At iterate    5    f=  1.00918D+03    |proj g|=  2.93451D+00
+
+At iterate    6    f=  9.27370D+02    |proj g|=  2.95000D+00
+
+At iterate    7    f=  8.12277D+02    |proj g|=  2.98193D+00
+
+At iterate    8    f=  7.73166D+02    |proj g|=  3.02893D+00
+
+At iterate    9    f=  7.20963D+02    |proj g|=  3.02671D+00
+
+At iterate   10    f=  7.07694D+02    |proj g|=  3.02434D+00
+
+At iterate   11    f=  6.93114D+02    |proj g|=  3.01964D+00
+
+At iterate   12    f=  6.76863D+02    |proj g|=  3.00708D+00
+
+At iterate   13    f=  6.66276D+02    |proj g|=  2.98808D+00
+
+At iterate   14    f=  6.60665D+02    |proj g|=  2.98153D+00
+
+At iterate   15    f=  6.57177D+02    |proj g|=  2.97115D+00
+
+At iterate   16    f=  6.53302D+02    |proj g|=  2.96326D+00
+
+At iterate   17    f=  6.52217D+02    |proj g|=  2.95495D+00
+
+At iterate   18    f=  6.48534D+02    |proj g|=  2.95049D+00
+
+At iterate   19    f=  6.47703D+02    |proj g|=  2.95320D+00
+
+At iterate   20    f=  6.46287D+02    |proj g|=  2.94434D+00
+
+At iterate   21    f=  6.44840D+02    |proj g|=  2.92006D+00
+
+At iterate   22    f=  6.43395D+02    |proj g|=  2.89933D+00
+
+At iterate   23    f=  6.42864D+02    |proj g|=  2.45876D+00
+
+At iterate   24    f=  6.42404D+02    |proj g|=  2.77262D+00
+
+At iterate   25    f=  6.42098D+02    |proj g|=  2.82801D+00
+
+At iterate   26    f=  6.41693D+02    |proj g|=  2.82447D+00
+
+At iterate   27    f=  6.41299D+02    |proj g|=  2.41418D+00
+
+At iterate   28    f=  6.41032D+02    |proj g|=  2.40204D+00
+
+At iterate   29    f=  6.40792D+02    |proj g|=  2.87537D+00
+
+At iterate   30    f=  6.40349D+02    |proj g|=  2.22666D+00
+
+At iterate   31    f=  6.40176D+02    |proj g|=  2.07346D+00
+
+At iterate   32    f=  6.39889D+02    |proj g|=  2.18197D+00
+
+At iterate   33    f=  6.39691D+02    |proj g|=  2.56626D+00
+
+At iterate   34    f=  6.39472D+02    |proj g|=  1.99028D+00
+
+At iterate   35    f=  6.39374D+02    |proj g|=  1.78985D+00
+
+At iterate   36    f=  6.39249D+02    |proj g|=  2.26536D+00
+
+At iterate   37    f=  6.39212D+02    |proj g|=  2.68851D+00
+
+At iterate   38    f=  6.39117D+02    |proj g|=  1.72159D+00
+
+At iterate   39    f=  6.39084D+02    |proj g|=  1.64216D+00
+
+At iterate   40    f=  6.39048D+02    |proj g|=  1.64397D+00
+
+At iterate   41    f=  6.38983D+02    |proj g|=  1.85457D+00
+
+At iterate   42    f=  6.38943D+02    |proj g|=  1.92332D+00
+
+At iterate   43    f=  6.38889D+02    |proj g|=  1.71579D+00
+
+At iterate   44    f=  6.38845D+02    |proj g|=  1.71134D+00
+
+At iterate   45    f=  6.38787D+02    |proj g|=  1.82385D+00
+
+At iterate   46    f=  6.38721D+02    |proj g|=  2.80367D+00
+
+At iterate   47    f=  6.38633D+02    |proj g|=  2.30999D+00
+
+At iterate   48    f=  6.38476D+02    |proj g|=  1.85873D+00
+
+At iterate   49    f=  6.38373D+02    |proj g|=  2.90444D+00
+
+At iterate   50    f=  6.38272D+02    |proj g|=  2.57952D+00
+
+At iterate   51    f=  6.38130D+02    |proj g|=  1.99332D+00
+
+At iterate   52    f=  6.38037D+02    |proj g|=  2.63457D+00
+
+At iterate   53    f=  6.37955D+02    |proj g|=  1.98942D+00
+
+At iterate   54    f=  6.37850D+02    |proj g|=  2.23954D+00
+
+At iterate   55    f=  6.37782D+02    |proj g|=  2.45511D+00
+
+At iterate   56    f=  6.37721D+02    |proj g|=  2.45572D+00
+
+At iterate   57    f=  6.37601D+02    |proj g|=  2.78628D+00
+
+At iterate   58    f=  6.37525D+02    |proj g|=  2.63299D+00
+
+At iterate   59    f=  6.37475D+02    |proj g|=  2.25633D+00
+
+At iterate   60    f=  6.37384D+02    |proj g|=  1.85786D+00
+
+At iterate   61    f=  6.37295D+02    |proj g|=  2.68787D+00
+
+At iterate   62    f=  6.37171D+02    |proj g|=  2.68842D+00
+
+At iterate   63    f=  6.37063D+02    |proj g|=  2.29245D+00
+
+At iterate   64    f=  6.36995D+02    |proj g|=  1.94294D+00
+
+At iterate   65    f=  6.36913D+02    |proj g|=  2.36922D+00
+
+At iterate   66    f=  6.36848D+02    |proj g|=  2.84072D+00
+
+At iterate   67    f=  6.36770D+02    |proj g|=  2.84122D+00
+
+At iterate   68    f=  6.36704D+02    |proj g|=  2.38009D+00
+
+At iterate   69    f=  6.36634D+02    |proj g|=  2.24378D+00
+
+At iterate   70    f=  6.36577D+02    |proj g|=  2.74561D+00
+
+At iterate   71    f=  6.36518D+02    |proj g|=  2.39296D+00
+
+At iterate   72    f=  6.36466D+02    |proj g|=  2.39612D+00
+
+At iterate   73    f=  6.36420D+02    |proj g|=  2.39475D+00
+
+At iterate   74    f=  6.36374D+02    |proj g|=  1.44584D+00
+
+At iterate   75    f=  6.36324D+02    |proj g|=  2.83838D+00
+
+At iterate   76    f=  6.36299D+02    |proj g|=  2.42615D+00
+
+At iterate   77    f=  6.36281D+02    |proj g|=  1.12127D+00
+
+At iterate   78    f=  6.36265D+02    |proj g|=  9.75339D-01
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+  197     78     81    151     0     0   9.753D-01   6.363D+02
+  F =   636.26472778985942     
+
+CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL            
+
+ Cauchy                time 8.280E-04 seconds.
+ Subspace minimization time 1.414E-03 seconds.
+ Line search           time 4.274E+02 seconds.
+
+ Total User time 4.327E+02 seconds.
+
+ INFO::optimise:...optimiser finished.
+ INFO::runretrieval:...optimise DONE
+ INFO::runretrieval::opti_succeed: T
+ 
+        i                Prior           Posterior          Change [%]
+ 
+        1         0.990000E-01        0.986993E-01            -0.30377
+        2         0.990000E-01        0.986993E-01            -0.30377
+        3         0.150000E+01        0.131958E+01           -12.02791
+        4         0.150000E+01        0.149564E+01            -0.29038
+        5         0.300000E+00        0.370281E+00            23.42688
+        6         0.150000E+01        0.132567E+01           -11.62196
+        7         0.150000E+01        0.149536E+01            -0.30939
+        8         0.300000E+00        0.369690E+00            23.22988
+        9         0.150000E+01        0.133825E+01           -10.78362
+       10         0.150000E+01        0.149704E+01            -0.19717
+       11         0.300000E+00        0.351047E+00            17.01575
+       12         0.150000E+01        0.135433E+01            -9.71151
+       13         0.150000E+01        0.149813E+01            -0.12496
+       14         0.300000E+00        0.335434E+00            11.81121
+       15         0.150000E+01        0.149419E+01            -0.38760
+       16         0.150000E+01        0.149575E+01            -0.28340
+       17         0.300000E+00        0.353029E+00            17.67623
+       18         0.150000E+01        0.163883E+01             9.25526
+       19         0.150000E+01        0.149448E+01            -0.36796
+       20         0.300000E+00        0.353715E+00            17.90514
+       21         0.150000E+01        0.178989E+01            19.32575
+       22         0.150000E+01        0.149609E+01            -0.26099
+       23         0.300000E+00        0.353087E+00            17.69573
+       24         0.150000E+01        0.194783E+01            29.85558
+       25         0.150000E+01        0.149523E+01            -0.31782
+       26         0.300000E+00        0.352757E+00            17.58574
+       27         0.150000E+01        0.211225E+01            40.81700
+       28         0.150000E+01        0.149550E+01            -0.29998
+       29         0.300000E+00        0.352576E+00            17.52543
+       30         0.150000E+01        0.228450E+01            52.29995
+       31         0.150000E+01        0.149547E+01            -0.30203
+       32         0.300000E+00        0.351141E+00            17.04716
+       33         0.150000E+01        0.246116E+01            64.07709
+       34         0.150000E+01        0.149999E+01            -0.00100
+       35         0.300000E+00        0.353410E+00            17.80348
+       36         0.150000E+01        0.267496E+01            78.33070
+       37         0.150000E+01        0.149313E+01            -0.45830
+       38         0.300000E+00        0.353357E+00            17.78558
+       39         0.150000E+01        0.289264E+01            92.84265
+       40         0.150000E+01        0.149303E+01            -0.46453
+       41         0.300000E+00        0.353032E+00            17.67738
+       42         0.150000E+01        0.311771E+01           107.84756
+       43         0.150000E+01        0.149256E+01            -0.49603
+       44         0.300000E+00        0.351648E+00            17.21616
+       45         0.150000E+01        0.334838E+01           123.22561
+       46         0.150000E+01        0.148971E+01            -0.68578
+       47         0.300000E+00        0.351533E+00            17.17755
+       48         0.150000E+01        0.358947E+01           139.29799
+       49         0.150000E+01        0.148833E+01            -0.77809
+       50         0.300000E+00        0.350774E+00            16.92482
+       51         0.150000E+01        0.384018E+01           156.01229
+       52         0.150000E+01        0.149449E+01            -0.36749
+       53         0.300000E+00        0.327969E+00             9.32291
+       54         0.150000E+01        0.409623E+01           173.08191
+       55         0.150000E+01        0.150044E+01             0.02917
+       56         0.300000E+00        0.326283E+00             8.76100
+       57         0.150000E+01        0.440363E+01           193.57554
+       58         0.150000E+01        0.142641E+01            -4.90618
+       59         0.300000E+00        0.279062E+00            -6.97937
+       60         0.150000E+01        0.445620E+01           197.07986
+       61         0.150000E+01        0.148458E+01            -1.02809
+       62         0.300000E+00        0.280959E+00            -6.34713
+       63         0.150000E+01        0.451552E+01           201.03491
+       64         0.150000E+01        0.149329E+01            -0.44702
+       65         0.300000E+00        0.281472E+00            -6.17604
+       66         0.150000E+01        0.458006E+01           205.33751
+       67         0.150000E+01        0.149581E+01            -0.27921
+       68         0.300000E+00        0.297475E+00            -0.84159
+       69         0.150000E+01        0.464975E+01           209.98350
+       70         0.150000E+01        0.149046E+01            -0.63614
+       71         0.300000E+00        0.314468E+00             4.82274
+       72         0.150000E+01        0.472634E+01           215.08937
+       73         0.150000E+01        0.149198E+01            -0.53436
+       74         0.300000E+00        0.314608E+00             4.86925
+       75         0.150000E+01        0.481010E+01           220.67345
+       76         0.150000E+01        0.149491E+01            -0.33933
+       77         0.300000E+00        0.310500E+00             3.50001
+       78         0.150000E+01        0.489574E+01           226.38256
+       79         0.150000E+01        0.147971E+01            -1.35275
+       80         0.300000E+00        0.310223E+00             3.40780
+       81         0.150000E+01        0.490337E+01           226.89134
+       82         0.150000E+01        0.148580E+01            -0.94696
+       83         0.300000E+00        0.322471E+00             7.49019
+       84         0.150000E+01        0.491638E+01           227.75894
+       85         0.150000E+01        0.148386E+01            -1.07593
+       86         0.300000E+00        0.322275E+00             7.42514
+       87         0.150000E+01        0.488291E+01           225.52714
+       88         0.150000E+01        0.149003E+01            -0.66436
+       89         0.300000E+00        0.322960E+00             7.65323
+       90         0.150000E+01        0.485536E+01           223.69075
+       91         0.150000E+01        0.149478E+01            -0.34833
+       92         0.300000E+00        0.330488E+00            10.16262
+       93         0.150000E+01        0.483307E+01           222.20473
+       94         0.150000E+01        0.148692E+01            -0.87203
+       95         0.300000E+00        0.343640E+00            14.54658
+       96         0.150000E+01        0.481913E+01           221.27516
+       97         0.150000E+01        0.148944E+01            -0.70413
+       98         0.300000E+00        0.343355E+00            14.45177
+       99         0.150000E+01        0.481172E+01           220.78158
+      100         0.150000E+01        0.149600E+01            -0.26681
+      101         0.300000E+00        0.331745E+00            10.58156
+      102         0.150000E+01        0.480933E+01           220.62205
+      103         0.150000E+01        0.149217E+01            -0.52224
+      104         0.300000E+00        0.327636E+00             9.21197
+      105         0.150000E+01        0.481315E+01           220.87650
+      106         0.150000E+01        0.149302E+01            -0.46552
+      107         0.300000E+00        0.327296E+00             9.09875
+      108         0.150000E+01        0.482415E+01           221.60971
+      109         0.150000E+01        0.149392E+01            -0.40517
+      110         0.300000E+00        0.327027E+00             9.00896
+      111         0.150000E+01        0.484040E+01           222.69323
+      112         0.150000E+01        0.150109E+01             0.07277
+      113         0.300000E+00        0.327025E+00             9.00831
+      114         0.150000E+01        0.487932E+01           225.28813
+      115         0.150000E+01        0.146839E+01            -2.10714
+      116         0.300000E+00        0.317879E+00             5.95964
+      117         0.150000E+01        0.477894E+01           218.59603
+      118         0.150000E+01        0.148390E+01            -1.07364
+      119         0.300000E+00        0.319429E+00             6.47648
+      120         0.150000E+01        0.468609E+01           212.40571
+      121         0.150000E+01        0.149309E+01            -0.46037
+      122         0.300000E+00        0.319291E+00             6.43023
+      123         0.150000E+01        0.459655E+01           206.43675
+      124         0.150000E+01        0.149539E+01            -0.30756
+      125         0.300000E+00        0.324165E+00             8.05485
+      126         0.150000E+01        0.451194E+01           200.79626
+      127         0.150000E+01        0.148890E+01            -0.74020
+      128         0.300000E+00        0.334598E+00            11.53251
+      129         0.150000E+01        0.443580E+01           195.71979
+      130         0.150000E+01        0.149314E+01            -0.45733
+      131         0.300000E+00        0.334356E+00            11.45201
+      132         0.150000E+01        0.436693E+01           191.12860
+      133         0.150000E+01        0.149557E+01            -0.29539
+      134         0.300000E+00        0.328270E+00             9.42325
+      135         0.150000E+01        0.430394E+01           186.92904
+      136         0.150000E+01        0.149087E+01            -0.60842
+      137         0.300000E+00        0.325743E+00             8.58092
+      138         0.150000E+01        0.424753E+01           183.16893
+      139         0.150000E+01        0.149209E+01            -0.52755
+      140         0.300000E+00        0.325247E+00             8.41571
+      141         0.150000E+01        0.419665E+01           179.77669
+      142         0.150000E+01        0.148451E+01            -1.03280
+      143         0.300000E+00        0.316810E+00             5.60344
+      144         0.150000E+01        0.405871E+01           170.58078
+      145         0.150000E+01        0.149502E+01            -0.33223
+      146         0.300000E+00        0.317779E+00             5.92630
+      147         0.150000E+01        0.392554E+01           161.70289
+      148         0.150000E+01        0.149882E+01            -0.07865
+      149         0.300000E+00        0.336529E+00            12.17642
+      150         0.150000E+01        0.379961E+01           153.30717
+      151         0.150000E+01        0.149138E+01            -0.57464
+      152         0.300000E+00        0.337392E+00            12.46411
+      153         0.150000E+01        0.368274E+01           145.51574
+      154         0.150000E+01        0.148902E+01            -0.73171
+      155         0.300000E+00        0.337920E+00            12.63989
+      156         0.150000E+01        0.357426E+01           138.28414
+      157         0.150000E+01        0.149473E+01            -0.35121
+      158         0.300000E+00        0.341400E+00            13.79995
+      159         0.150000E+01        0.347211E+01           131.47386
+      160         0.150000E+01        0.149007E+01            -0.66192
+      161         0.300000E+00        0.352310E+00            17.43674
+      162         0.150000E+01        0.337593E+01           125.06209
+      163         0.150000E+01        0.149156E+01            -0.56249
+      164         0.300000E+00        0.352533E+00            17.51094
+      165         0.150000E+01        0.328725E+01           119.14993
+      166         0.150000E+01        0.149461E+01            -0.35931
+      167         0.300000E+00        0.354167E+00            18.05554
+      168         0.150000E+01        0.320281E+01           113.52096
+      169         0.150000E+01        0.149059E+01            -0.62703
+      170         0.300000E+00        0.361751E+00            20.58359
+      171         0.150000E+01        0.312800E+01           108.53317
+      172         0.150000E+01        0.149113E+01            -0.59157
+      173         0.300000E+00        0.361908E+00            20.63605
+      174         0.150000E+01        0.306251E+01           104.16738
+      175         0.150000E+01        0.149406E+01            -0.39592
+      176         0.300000E+00        0.362429E+00            20.80960
+      177         0.150000E+01        0.300536E+01           100.35746
+      178         0.150000E+01        0.148993E+01            -0.67132
+      179         0.300000E+00        0.369070E+00            23.02318
+      180         0.150000E+01        0.295792E+01            97.19436
+      181         0.150000E+01        0.149017E+01            -0.65553
+      182         0.300000E+00        0.368908E+00            22.96923
+      183         0.150000E+01        0.292093E+01            94.72882
+      184         0.150000E+01        0.149324E+01            -0.45079
+      185         0.300000E+00        0.359653E+00            19.88441
+      186         0.150000E+01        0.289095E+01            92.72997
+      187         0.150000E+01        0.149083E+01            -0.61136
+      188         0.300000E+00        0.355462E+00            18.48734
+      189         0.150000E+01        0.287053E+01            91.36844
+      190         0.150000E+01        0.149018E+01            -0.65450
+      191         0.300000E+00        0.355023E+00            18.34116
+      192         0.150000E+01        0.285982E+01            90.65495
+      193         0.150000E+01        0.149792E+01            -0.13838
+      194         0.300000E+00        0.342167E+00            14.05553
+      195         0.150000E+01        0.285297E+01            90.19798
+      196         0.150000E+01        0.149550E+01            -0.29977
+      197         0.300000E+00        0.341799E+00            13.93300
+ INFO::writing final control vector to x.b
+ INFO::writing prior uncertainty (physical units) to sx.b
+ INFO::runretrieval:start uncertainty analysis on state...
+ 
+ INFO::ua:SVD done with ierr =          0
+ 
+ INFO::runretrieval:...uncertainty analysis on state DONE
+ 
+       Extreme off diagonal correlations
+            Min/Max                 value    i    j
+                Min              -0.00788  180  178
+                Max               0.49793    5    8
+ 
+ INFO::finishdf:target file ***controlvector_prior.nc*** successfully written.
+ INFO::finishdf:target file ***controlvector_post.nc*** successfully written.
+('exp_list length: ', '1')
+/home/users/ewanp82/projects/ret_tool_s3
+str, obs_s2
+0.01
+0.5
+0.05
+0.5
+str, obs_s1
+str, time_start
+str, site_nml
+0.001
+3.0
+0.1
+0.05
+float, gtol
+float, s1_vv_uncfloor
+float, s2_uncfloor
+str, time_end
+str, dynmodunc_inifile
+float, s1_vh_uncfloor
+float, s2_relunc
+float, s1_unc
+/gws/nopw/j04/odanceo/epinnington/sen_syn/515_med_flat_hv_b4b5b6b7b8b8a_0
+<type 'netCDF4._netCDF4.Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    institution: The Inversion Lab, Hamburg, Germany
+    date_created: 20210906T11:24:01+01:00
+    optimisation_tag: SUCCESSFUL
+    dimensions(sizes): nparam_s1(2), npoints(65)
+    variables(dimensions): float64 [4mtime[0m(npoints), int32 [4msim_typ[0m(npoints), float64 [4mlaicoeff[0m(nparam_s1), float64 [4mlaicoeff_unc[0m(nparam_s1), float64 [4mlai[0m(npoints), float64 [4mcanht[0m(npoints), float64 [4msm[0m(npoints), float64 [4mlai_unc[0m(npoints), float64 [4mcanht_unc[0m(npoints), float64 [4msm_unc[0m(npoints)
+    groups: 
+
+[datetime.datetime(2017, 6, 9, 5, 26)
+ datetime.datetime(2017, 6, 10, 5, 17)
+ datetime.datetime(2017, 6, 11, 17, 6)
+ datetime.datetime(2017, 6, 13, 10, 10)
+ datetime.datetime(2017, 6, 15, 5, 26)
+ datetime.datetime(2017, 6, 16, 5, 17)
+ datetime.datetime(2017, 6, 17, 17, 6)
+ datetime.datetime(2017, 6, 21, 5, 26)
+ datetime.datetime(2017, 6, 22, 5, 17)
+ datetime.datetime(2017, 6, 23, 17, 6)
+ datetime.datetime(2017, 6, 26, 10, 20)
+ datetime.datetime(2017, 6, 27, 5, 26)
+ datetime.datetime(2017, 6, 28, 5, 17)
+ datetime.datetime(2017, 6, 29, 17, 6)
+ datetime.datetime(2017, 7, 3, 5, 26) datetime.datetime(2017, 7, 4, 5, 17)
+ datetime.datetime(2017, 7, 5, 17, 6)
+ datetime.datetime(2017, 7, 6, 10, 20)
+ datetime.datetime(2017, 7, 8, 10, 10)
+ datetime.datetime(2017, 7, 9, 5, 26)
+ datetime.datetime(2017, 7, 10, 5, 17)
+ datetime.datetime(2017, 7, 11, 17, 6)
+ datetime.datetime(2017, 7, 15, 5, 26)
+ datetime.datetime(2017, 7, 16, 5, 17)
+ datetime.datetime(2017, 7, 17, 17, 6)
+ datetime.datetime(2017, 7, 18, 10, 10)
+ datetime.datetime(2017, 7, 21, 5, 26)
+ datetime.datetime(2017, 7, 21, 10, 20)
+ datetime.datetime(2017, 7, 22, 5, 17)
+ datetime.datetime(2017, 7, 23, 17, 6)
+ datetime.datetime(2017, 7, 27, 5, 26)
+ datetime.datetime(2017, 7, 28, 5, 17)
+ datetime.datetime(2017, 7, 29, 17, 6)
+ datetime.datetime(2017, 8, 2, 5, 26) datetime.datetime(2017, 8, 3, 5, 17)
+ datetime.datetime(2017, 8, 4, 17, 6)
+ datetime.datetime(2017, 8, 5, 10, 20)
+ datetime.datetime(2017, 8, 7, 10, 10)
+ datetime.datetime(2017, 8, 8, 5, 26) datetime.datetime(2017, 8, 9, 5, 17)
+ datetime.datetime(2017, 8, 10, 17, 6)
+ datetime.datetime(2017, 8, 14, 5, 26)
+ datetime.datetime(2017, 8, 15, 5, 17)
+ datetime.datetime(2017, 8, 16, 17, 6)
+ datetime.datetime(2017, 8, 20, 5, 26)
+ datetime.datetime(2017, 8, 21, 5, 17)
+ datetime.datetime(2017, 8, 22, 10, 10)
+ datetime.datetime(2017, 8, 22, 17, 6)
+ datetime.datetime(2017, 8, 25, 10, 20)
+ datetime.datetime(2017, 8, 26, 5, 26)
+ datetime.datetime(2017, 8, 27, 5, 17)
+ datetime.datetime(2017, 8, 28, 17, 6)
+ datetime.datetime(2017, 9, 1, 5, 26) datetime.datetime(2017, 9, 2, 5, 17)
+ datetime.datetime(2017, 9, 3, 17, 6) datetime.datetime(2017, 9, 7, 5, 26)
+ datetime.datetime(2017, 9, 8, 5, 17) datetime.datetime(2017, 9, 9, 17, 6)
+ datetime.datetime(2017, 9, 13, 5, 26)
+ datetime.datetime(2017, 9, 14, 5, 17)
+ datetime.datetime(2017, 9, 15, 17, 6)
+ datetime.datetime(2017, 9, 19, 5, 26)
+ datetime.datetime(2017, 9, 20, 5, 17)
+ datetime.datetime(2017, 9, 21, 10, 10)
+ datetime.datetime(2017, 9, 21, 17, 6)]
+[  224   367   582   828  1088  1231  1446  1952  2095  2310  2701  2816
+  2959  3174  3680  3823  4038  4141  4428  4544  4687  4902  5408  5551
+  5766  5868  6272  6301  6415  6630  7136  7279  7494  8000  8143  8358
+  8461  8748  8864  9007  9222  9728  9871 10086 10591 10734 10907 10949
+ 11340 11455 11598 11813 12319 12462 12677 13183 13326 13541 14047 14190
+ 14405 14911 15054 15227 15269]
+/gws/nopw/j04/odanceo/epinnington/sen_syn/515_med_flat_hv_b4b5b6b7b8b8a_0
+<type 'netCDF4._netCDF4.Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    institution: The Inversion Lab, Hamburg, Germany
+    date_created: 20210906T11:24:01+01:00
+    optimisation_tag: SUCCESSFUL
+    dimensions(sizes): nparam_s1(2), npoints(65)
+    variables(dimensions): float64 [4mtime[0m(npoints), int32 [4msim_typ[0m(npoints), float64 [4mlaicoeff[0m(nparam_s1), float64 [4mlaicoeff_unc[0m(nparam_s1), float64 [4mlai[0m(npoints), float64 [4mcanht[0m(npoints), float64 [4msm[0m(npoints), float64 [4mlai_unc[0m(npoints), float64 [4mcanht_unc[0m(npoints), float64 [4msm_unc[0m(npoints)
+    groups: 
+
+[datetime.datetime(2017, 6, 9, 5, 26)
+ datetime.datetime(2017, 6, 10, 5, 17)
+ datetime.datetime(2017, 6, 11, 17, 6)
+ datetime.datetime(2017, 6, 13, 10, 10)
+ datetime.datetime(2017, 6, 15, 5, 26)
+ datetime.datetime(2017, 6, 16, 5, 17)
+ datetime.datetime(2017, 6, 17, 17, 6)
+ datetime.datetime(2017, 6, 21, 5, 26)
+ datetime.datetime(2017, 6, 22, 5, 17)
+ datetime.datetime(2017, 6, 23, 17, 6)
+ datetime.datetime(2017, 6, 26, 10, 20)
+ datetime.datetime(2017, 6, 27, 5, 26)
+ datetime.datetime(2017, 6, 28, 5, 17)
+ datetime.datetime(2017, 6, 29, 17, 6)
+ datetime.datetime(2017, 7, 3, 5, 26) datetime.datetime(2017, 7, 4, 5, 17)
+ datetime.datetime(2017, 7, 5, 17, 6)
+ datetime.datetime(2017, 7, 6, 10, 20)
+ datetime.datetime(2017, 7, 8, 10, 10)
+ datetime.datetime(2017, 7, 9, 5, 26)
+ datetime.datetime(2017, 7, 10, 5, 17)
+ datetime.datetime(2017, 7, 11, 17, 6)
+ datetime.datetime(2017, 7, 15, 5, 26)
+ datetime.datetime(2017, 7, 16, 5, 17)
+ datetime.datetime(2017, 7, 17, 17, 6)
+ datetime.datetime(2017, 7, 18, 10, 10)
+ datetime.datetime(2017, 7, 21, 5, 26)
+ datetime.datetime(2017, 7, 21, 10, 20)
+ datetime.datetime(2017, 7, 22, 5, 17)
+ datetime.datetime(2017, 7, 23, 17, 6)
+ datetime.datetime(2017, 7, 27, 5, 26)
+ datetime.datetime(2017, 7, 28, 5, 17)
+ datetime.datetime(2017, 7, 29, 17, 6)
+ datetime.datetime(2017, 8, 2, 5, 26) datetime.datetime(2017, 8, 3, 5, 17)
+ datetime.datetime(2017, 8, 4, 17, 6)
+ datetime.datetime(2017, 8, 5, 10, 20)
+ datetime.datetime(2017, 8, 7, 10, 10)
+ datetime.datetime(2017, 8, 8, 5, 26) datetime.datetime(2017, 8, 9, 5, 17)
+ datetime.datetime(2017, 8, 10, 17, 6)
+ datetime.datetime(2017, 8, 14, 5, 26)
+ datetime.datetime(2017, 8, 15, 5, 17)
+ datetime.datetime(2017, 8, 16, 17, 6)
+ datetime.datetime(2017, 8, 20, 5, 26)
+ datetime.datetime(2017, 8, 21, 5, 17)
+ datetime.datetime(2017, 8, 22, 10, 10)
+ datetime.datetime(2017, 8, 22, 17, 6)
+ datetime.datetime(2017, 8, 25, 10, 20)
+ datetime.datetime(2017, 8, 26, 5, 26)
+ datetime.datetime(2017, 8, 27, 5, 17)
+ datetime.datetime(2017, 8, 28, 17, 6)
+ datetime.datetime(2017, 9, 1, 5, 26) datetime.datetime(2017, 9, 2, 5, 17)
+ datetime.datetime(2017, 9, 3, 17, 6) datetime.datetime(2017, 9, 7, 5, 26)
+ datetime.datetime(2017, 9, 8, 5, 17) datetime.datetime(2017, 9, 9, 17, 6)
+ datetime.datetime(2017, 9, 13, 5, 26)
+ datetime.datetime(2017, 9, 14, 5, 17)
+ datetime.datetime(2017, 9, 15, 17, 6)
+ datetime.datetime(2017, 9, 19, 5, 26)
+ datetime.datetime(2017, 9, 20, 5, 17)
+ datetime.datetime(2017, 9, 21, 10, 10)
+ datetime.datetime(2017, 9, 21, 17, 6)]
+/gws/nopw/j04/odanceo/epinnington/sen_syn/515_med_flat_hv_b4b5b6b7b8b8a_0
+<type 'netCDF4._netCDF4.Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    institution: The Inversion Lab, Hamburg, Germany
+    date_created: 20210906T11:24:01+01:00
+    optimisation_tag: SUCCESSFUL
+    dimensions(sizes): nparam_s1(2), npoints(65)
+    variables(dimensions): float64 [4mtime[0m(npoints), int32 [4msim_typ[0m(npoints), float64 [4mlaicoeff[0m(nparam_s1), float64 [4mlaicoeff_unc[0m(nparam_s1), float64 [4mlai[0m(npoints), float64 [4mcanht[0m(npoints), float64 [4msm[0m(npoints), float64 [4mlai_unc[0m(npoints), float64 [4mcanht_unc[0m(npoints), float64 [4msm_unc[0m(npoints)
+    groups: 
+
+[datetime.datetime(2017, 6, 9, 5, 26)
+ datetime.datetime(2017, 6, 10, 5, 17)
+ datetime.datetime(2017, 6, 11, 17, 6)
+ datetime.datetime(2017, 6, 13, 10, 10)
+ datetime.datetime(2017, 6, 15, 5, 26)
+ datetime.datetime(2017, 6, 16, 5, 17)
+ datetime.datetime(2017, 6, 17, 17, 6)
+ datetime.datetime(2017, 6, 21, 5, 26)
+ datetime.datetime(2017, 6, 22, 5, 17)
+ datetime.datetime(2017, 6, 23, 17, 6)
+ datetime.datetime(2017, 6, 26, 10, 20)
+ datetime.datetime(2017, 6, 27, 5, 26)
+ datetime.datetime(2017, 6, 28, 5, 17)
+ datetime.datetime(2017, 6, 29, 17, 6)
+ datetime.datetime(2017, 7, 3, 5, 26) datetime.datetime(2017, 7, 4, 5, 17)
+ datetime.datetime(2017, 7, 5, 17, 6)
+ datetime.datetime(2017, 7, 6, 10, 20)
+ datetime.datetime(2017, 7, 8, 10, 10)
+ datetime.datetime(2017, 7, 9, 5, 26)
+ datetime.datetime(2017, 7, 10, 5, 17)
+ datetime.datetime(2017, 7, 11, 17, 6)
+ datetime.datetime(2017, 7, 15, 5, 26)
+ datetime.datetime(2017, 7, 16, 5, 17)
+ datetime.datetime(2017, 7, 17, 17, 6)
+ datetime.datetime(2017, 7, 18, 10, 10)
+ datetime.datetime(2017, 7, 21, 5, 26)
+ datetime.datetime(2017, 7, 21, 10, 20)
+ datetime.datetime(2017, 7, 22, 5, 17)
+ datetime.datetime(2017, 7, 23, 17, 6)
+ datetime.datetime(2017, 7, 27, 5, 26)
+ datetime.datetime(2017, 7, 28, 5, 17)
+ datetime.datetime(2017, 7, 29, 17, 6)
+ datetime.datetime(2017, 8, 2, 5, 26) datetime.datetime(2017, 8, 3, 5, 17)
+ datetime.datetime(2017, 8, 4, 17, 6)
+ datetime.datetime(2017, 8, 5, 10, 20)
+ datetime.datetime(2017, 8, 7, 10, 10)
+ datetime.datetime(2017, 8, 8, 5, 26) datetime.datetime(2017, 8, 9, 5, 17)
+ datetime.datetime(2017, 8, 10, 17, 6)
+ datetime.datetime(2017, 8, 14, 5, 26)
+ datetime.datetime(2017, 8, 15, 5, 17)
+ datetime.datetime(2017, 8, 16, 17, 6)
+ datetime.datetime(2017, 8, 20, 5, 26)
+ datetime.datetime(2017, 8, 21, 5, 17)
+ datetime.datetime(2017, 8, 22, 10, 10)
+ datetime.datetime(2017, 8, 22, 17, 6)
+ datetime.datetime(2017, 8, 25, 10, 20)
+ datetime.datetime(2017, 8, 26, 5, 26)
+ datetime.datetime(2017, 8, 27, 5, 17)
+ datetime.datetime(2017, 8, 28, 17, 6)
+ datetime.datetime(2017, 9, 1, 5, 26) datetime.datetime(2017, 9, 2, 5, 17)
+ datetime.datetime(2017, 9, 3, 17, 6) datetime.datetime(2017, 9, 7, 5, 26)
+ datetime.datetime(2017, 9, 8, 5, 17) datetime.datetime(2017, 9, 9, 17, 6)
+ datetime.datetime(2017, 9, 13, 5, 26)
+ datetime.datetime(2017, 9, 14, 5, 17)
+ datetime.datetime(2017, 9, 15, 17, 6)
+ datetime.datetime(2017, 9, 19, 5, 26)
+ datetime.datetime(2017, 9, 20, 5, 17)
+ datetime.datetime(2017, 9, 21, 10, 10)
+ datetime.datetime(2017, 9, 21, 17, 6)]
+ran experiment 0

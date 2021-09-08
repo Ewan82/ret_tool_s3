@@ -1,0 +1,1031 @@
+cpu-bind=MASK - host452, task  0  0 [63943]: mask 0x1 set
+src/retrieval/ua.f90:12.24:
+
+  integer :: iflag, i, j, l, k
+                        1
+Warning: Unused variable 'j' declared at (1)
+ar: creating lib/libretr.a
+src/derivatives/cost_bw.f90:1464.12:
+
+  temp_bw = hlp_bw/(temp0+1._8)
+            1
+Warning: Possible change of value in conversion from COMPLEX(8) to COMPLEX(4) at (1)
+src/derivatives/cost_bw.f90:955.10:
+
+  e1_bw = CMPLX(1.0, 0.0, kind=8)*eps_bw
+          1
+Warning: Possible change of value in conversion from COMPLEX(8) to REAL(8) at (1)
+src/derivatives/cost_bw.f90:956.10:
+
+  e2_bw = CMPLX(0.0, 1.0, kind=8)*eps_bw
+          1
+Warning: Possible change of value in conversion from COMPLEX(8) to REAL(8) at (1)
+src/derivatives/cost_bw.f90:196.43:
+
+SUBROUTINE MISFIT_BW(n, x, x_bw, m, obsdiff, obsdiff_bw)
+                                           1
+Warning: Unused dummy argument 'obsdiff' at (1)
+src/derivatives/cost_bw.f90:317.17:
+
+  INTEGER :: res0
+                 1
+Warning: Unused variable 'res0' declared at (1)
+src/derivatives/cost_bw.f90:319.17:
+
+  INTEGER :: res2
+                 1
+Warning: Unused variable 'res2' declared at (1)
+src/derivatives/cost_bw.f90:3453.22:
+
+SUBROUTINE X2P_BW(n, x, x_bw, xp, xp_bw)
+                      1
+Warning: Unused dummy argument 'x' at (1)
+src/derivatives/cost_bw.f90:3453.32:
+
+SUBROUTINE X2P_BW(n, x, x_bw, xp, xp_bw)
+                                1
+Warning: Unused dummy argument 'xp' at (1)
+src/derivatives/cost_bw.f90:3471.39:
+
+SUBROUTINE CONTROL_VECTOR_SPLIT_BW(n, x, x_bw, n_s1, x_s1, x_s1_bw, n_s2&
+                                       1
+Warning: Unused dummy argument 'x' at (1)
+src/derivatives/cost_bw.f90:3471.57:
+
+SUBROUTINE CONTROL_VECTOR_SPLIT_BW(n, x, x_bw, n_s1, x_s1, x_s1_bw, n_s2&
+                                                         1
+Warning: Unused dummy argument 'x_s1' at (1)
+src/derivatives/cost_bw.f90:3472.8:
+
+& , x_s2, x_s2_bw)
+        1
+Warning: Unused dummy argument 'x_s2' at (1)
+src/derivatives/cost_bw.f90:418.17:
+
+  INTEGER :: res0
+                 1
+Warning: Unused variable 'res0' declared at (1)
+src/derivatives/cost_bw.f90:419.17:
+
+  INTEGER :: res1
+                 1
+Warning: Unused variable 'res1' declared at (1)
+src/derivatives/cost_bw.f90:420.17:
+
+  INTEGER :: res2
+                 1
+Warning: Unused variable 'res2' declared at (1)
+src/derivatives/cost_bw.f90:491.65:
+
+SUBROUTINE SIMULATE_S1_1GEOM_BW(statev, statev_bw, iv_geom, bscat, &
+                                                                 1
+Warning: Unused dummy argument 'bscat' at (1)
+src/derivatives/cost_bw.f90:594.59:
+
+& , canht_bw, mv, mv_bw, s0vh, s0vh_bw, s0vv, s0vv_bw, s0hh)
+                                                           1
+Warning: Unused dummy argument 's0hh' at (1)
+src/derivatives/cost_bw.f90:594.29:
+
+& , canht_bw, mv, mv_bw, s0vh, s0vh_bw, s0vv, s0vv_bw, s0hh)
+                             1
+Warning: Unused dummy argument 's0vh' at (1)
+src/derivatives/cost_bw.f90:594.44:
+
+& , canht_bw, mv, mv_bw, s0vh, s0vh_bw, s0vv, s0vv_bw, s0hh)
+                                            1
+Warning: Unused dummy argument 's0vv' at (1)
+src/derivatives/cost_bw.f90:934.72:
+
+SUBROUTINE DOBSON85_EPS_BW(mv, mv_bw, bulk, alpha, beta1, beta2, ew, eps&
+                                                                        1
+Warning: Unused dummy argument 'eps' at (1)
+src/derivatives/cost_bw.f90:1485.57:
+
+SUBROUTINE REFLECTIVITY_BW(theta, eps, eps_bw, v, v_bw, h, h_bw)
+                                                         1
+Warning: Unused dummy argument 'h' at (1)
+src/derivatives/cost_bw.f90:1485.48:
+
+SUBROUTINE REFLECTIVITY_BW(theta, eps, eps_bw, v, v_bw, h, h_bw)
+                                                1
+Warning: Unused dummy argument 'v' at (1)
+src/derivatives/cost_bw.f90:1020.44:
+
+SUBROUTINE CALC_RHO_BW(theta, ks, v, v_bw, h, h_bw, rho_v, rho_v_bw, &
+                                            1
+Warning: Unused dummy argument 'h' at (1)
+src/derivatives/cost_bw.f90:1021.7:
+
+& rho_h, rho_h_bw)
+       1
+Warning: Unused dummy argument 'rho_h' at (1)
+src/derivatives/cost_bw.f90:1020.57:
+
+SUBROUTINE CALC_RHO_BW(theta, ks, v, v_bw, h, h_bw, rho_v, rho_v_bw, &
+                                                         1
+Warning: Unused dummy argument 'rho_v' at (1)
+src/derivatives/cost_bw.f90:1020.35:
+
+SUBROUTINE CALC_RHO_BW(theta, ks, v, v_bw, h, h_bw, rho_v, rho_v_bw, &
+                                   1
+Warning: Unused dummy argument 'v' at (1)
+src/derivatives/cost_bw.f90:767.35:
+
+& lai_coeff_bw, ke_v, ke_v_bw, ke_h, ke_h_bw, ks_v, ks_v_bw, ks_h, &
+                                   1
+Warning: Unused dummy argument 'ke_h' at (1)
+src/derivatives/cost_bw.f90:767.20:
+
+& lai_coeff_bw, ke_v, ke_v_bw, ke_h, ke_h_bw, ks_v, ks_v_bw, ks_h, &
+                    1
+Warning: Unused dummy argument 'ke_v' at (1)
+src/derivatives/cost_bw.f90:767.65:
+
+& lai_coeff_bw, ke_v, ke_v_bw, ke_h, ke_h_bw, ks_v, ks_v_bw, ks_h, &
+                                                                 1
+Warning: Unused dummy argument 'ks_h' at (1)
+src/derivatives/cost_bw.f90:767.50:
+
+& lai_coeff_bw, ke_v, ke_v_bw, ke_h, ke_h_bw, ks_v, ks_v_bw, ks_h, &
+                                                  1
+Warning: Unused dummy argument 'ks_v' at (1)
+src/derivatives/cost_bw.f90:832.27:
+
+    REAL(kind=8) :: tau_fct
+                           1
+Warning: Unused variable 'tau_fct' declared at (1)
+src/derivatives/cost_bw.f90:803.31:
+
+& d_bw, theta, t_v, t_v_bw, t_h, t_h_bw)
+                               1
+Warning: Unused dummy argument 't_h' at (1)
+src/derivatives/cost_bw.f90:803.18:
+
+& d_bw, theta, t_v, t_v_bw, t_h, t_h_bw)
+                  1
+Warning: Unused dummy argument 't_v' at (1)
+src/derivatives/cost_bw.f90:1644.40:
+
+& sigma_s_hh, sigma_s_hh_bw, backscatter, backscatter_bw)
+                                        1
+Warning: Unused dummy argument 'backscatter' at (1)
+src/derivatives/cost_bw.f90:1644.12:
+
+& sigma_s_hh, sigma_s_hh_bw, backscatter, backscatter_bw)
+            1
+Warning: Unused dummy argument 'sigma_s_hh' at (1)
+src/derivatives/cost_bw.f90:1643.50:
+
+SUBROUTINE SCATRAYLEIGH_SIGMA_V_BACK_BW(sigma_s_vv, sigma_s_vv_bw, &
+                                                  1
+Warning: Unused dummy argument 'sigma_s_vv' at (1)
+src/derivatives/cost_bw.f90:860.61:
+
+& ke_v, ke_v_bw, ke_h, ke_h_bw, t_v, t_v_bw, t_h, t_h_bw, s0c, s0c_bw)
+                                                             1
+Warning: Unused dummy argument 's0c' at (1)
+src/derivatives/cost_bw.f90:1390.24:
+
+    REAL(kind=8) :: a, b
+                        1
+Warning: Unused variable 'b' declared at (1)
+src/derivatives/cost_bw.f90:1398.27:
+
+    REAL(kind=8) :: calc_vv
+                           1
+Warning: Unused variable 'calc_vv' declared at (1)
+src/derivatives/cost_bw.f90:1376.26:
+
+    REAL(kind=8) :: calc_q
+                          1
+Warning: Unused variable 'calc_q' declared at (1)
+src/derivatives/cost_bw.f90:1350.26:
+
+    REAL(kind=8) :: calc_p
+                          1
+Warning: Unused variable 'calc_p' declared at (1)
+src/derivatives/cost_bw.f90:1295.66:
+
+SUBROUTINE OH92_BACKSCATTER_BW(eps, eps_bw, ks, theta, backscatter, &
+                                                                  1
+Warning: Unused dummy argument 'backscatter' at (1)
+src/derivatives/cost_bw.f90:1458.26:
+
+  REAL(kind=8) :: fresnel0
+                          1
+Warning: Unused variable 'fresnel0' declared at (1)
+src/derivatives/cost_bw.f90:1525.17:
+
+& rho_v_bw, rho_h, rho_h_bw)
+                 1
+Warning: Unused dummy argument 'rho_h' at (1)
+src/derivatives/cost_bw.f90:1524.68:
+
+SUBROUTINE CALC_REFLECTION_COEFFICIENTS_BW(theta, eps, eps_bw, rho_v, &
+                                                                    1
+Warning: Unused dummy argument 'rho_v' at (1)
+src/derivatives/cost_bw.f90:1245.32:
+
+& t_v_bw, t_h, t_h_bw, gnd_sigma, gnd_sigma_bw)
+                                1
+Warning: Unused dummy argument 'gnd_sigma' at (1)
+src/derivatives/cost_bw.f90:1167.14:
+
+& t_h_bw, s0cg, s0cg_bw)
+              1
+Warning: Unused dummy argument 's0cg' at (1)
+src/derivatives/cost_bw.f90:1060.22:
+
+& ke_h, ke_h_bw, s0gcg, s0gcg_bw)
+                      1
+Warning: Unused dummy argument 's0gcg' at (1)
+src/derivatives/cost_bw.f90:1697.17:
+
+  INTEGER :: res0
+                 1
+Warning: Unused variable 'res0' declared at (1)
+src/derivatives/cost_bw.f90:1778.63:
+
+SUBROUTINE SIMULATE_S2_1GEOM_BW(statev, statev_bw, iv_geom, brf, brf_bw)
+                                                               1
+Warning: Unused dummy argument 'brf' at (1)
+src/derivatives/cost_bw.f90:3432.28:
+
+SUBROUTINE SM_TO_RSL1_BW0(sm, sm_bw, rsl1, sm_coeff, sm_to_rsl1_bw)
+                            1
+Warning: Unused dummy argument 'sm' at (1)
+src/derivatives/cost_bw.f90:3440.20:
+
+  REAL :: sm_to_rsl1
+                    1
+Warning: Unused variable 'sm_to_rsl1' declared at (1)
+src/derivatives/cost_bw.f90:1897.57:
+
+& , cab, cw, cp, cc, rsl1, rsl1_bw, rsl2, rsl3, rsl4, brf, brf_bw)
+                                                         1
+Warning: Unused dummy argument 'brf' at (1)
+src/derivatives/cost_bw.f90:1996.10:
+
+& w4, refl, refl_bw)
+          1
+Warning: Unused dummy argument 'refl' at (1)
+src/derivatives/cost_bw.f90:2006.28:
+
+  REAL :: fraction, rs_lower, rs_upper
+                            1
+Warning: Unused variable 'rs_lower' declared at (1)
+src/derivatives/cost_bw.f90:2006.38:
+
+  REAL :: fraction, rs_lower, rs_upper
+                                      1
+Warning: Unused variable 'rs_upper' declared at (1)
+src/derivatives/cost_bw.f90:1995.54:
+
+SUBROUTINE PRICE_SOIL_FULLSPECTRUM_INTERP1NM_FTN_BW(w1, w1_bw, w2, w3, &
+                                                      1
+Warning: Unused dummy argument 'w1' at (1)
+src/derivatives/cost_bw.f90:1995.65:
+
+SUBROUTINE PRICE_SOIL_FULLSPECTRUM_INTERP1NM_FTN_BW(w1, w1_bw, w2, w3, &
+                                                                 1
+Warning: Unused dummy argument 'w2' at (1)
+src/derivatives/cost_bw.f90:1995.69:
+
+SUBROUTINE PRICE_SOIL_FULLSPECTRUM_INTERP1NM_FTN_BW(w1, w1_bw, w2, w3, &
+                                                                     1
+Warning: Unused dummy argument 'w3' at (1)
+src/derivatives/cost_bw.f90:1996.4:
+
+& w4, refl, refl_bw)
+    1
+Warning: Unused dummy argument 'w4' at (1)
+src/derivatives/cost_bw.f90:3411.26:
+
+  REAL(kind=8) :: convolve
+                          1
+Warning: Unused variable 'convolve' declared at (1)
+src/derivatives/cost_bw.f90:3400.34:
+
+SUBROUTINE CONVOLVE_BW0(nw, spect1, spect1_bw, spect2, convolve_bw)
+                                  1
+Warning: Unused dummy argument 'spect1' at (1)
+src/derivatives/cost_bw.f90:3407.35:
+
+  REAL(kind=8) :: spect1_dot_spect2, spect2_sum
+                                   1
+Warning: Unused variable 'spect1_dot_spect2' declared at (1)
+src/derivatives/cost_bw.f90:2134.14:
+
+  REAL :: abs0
+              1
+Warning: Unused variable 'abs0' declared at (1)
+src/derivatives/cost_bw.f90:2135.14:
+
+  REAL :: abs1
+              1
+Warning: Unused variable 'abs1' declared at (1)
+src/derivatives/cost_bw.f90:2050.56:
+
+& xrs_bw, xhc, xhc_bw, xlai, xlai_bw, rpl, xrl, xtl, brf, brf_bw)
+                                                        1
+Warning: Unused dummy argument 'brf' at (1)
+src/derivatives/cost_bw.f90:2092.24:
+
+  REAL :: x_lambda_i, r1, r2, r3, xmeas
+                        1
+Warning: Unused variable 'r1' declared at (1)
+src/derivatives/cost_bw.f90:2092.28:
+
+  REAL :: x_lambda_i, r1, r2, r3, xmeas
+                            1
+Warning: Unused variable 'r2' declared at (1)
+src/derivatives/cost_bw.f90:2092.32:
+
+  REAL :: x_lambda_i, r1, r2, r3, xmeas
+                                1
+Warning: Unused variable 'r3' declared at (1)
+src/derivatives/cost_bw.f90:2136.17:
+
+  REAL :: result1
+                 1
+Warning: Unused variable 'result1' declared at (1)
+src/derivatives/cost_bw.f90:2137.17:
+
+  REAL :: result2
+                 1
+Warning: Unused variable 'result2' declared at (1)
+src/derivatives/cost_bw.f90:2139.12:
+
+  REAL :: x1
+            1
+Warning: Unused variable 'x1' declared at (1)
+src/derivatives/cost_bw.f90:2138.12:
+
+  REAL :: x2
+            1
+Warning: Unused variable 'x2' declared at (1)
+src/derivatives/cost_bw.f90:2092.39:
+
+  REAL :: x_lambda_i, r1, r2, r3, xmeas
+                                       1
+Warning: Unused variable 'xmeas' declared at (1)
+src/derivatives/cost_bw.f90:2296.19:
+
+  REAL :: rho_0_nad
+                   1
+Warning: Unused variable 'rho_0_nad' declared at (1)
+src/derivatives/cost_bw.f90:2267.32:
+
+  REAL :: ki, ke, xs1, xs2, rs_d
+                                1
+Warning: Unused variable 'rs_d' declared at (1)
+src/derivatives/cost_bw.f90:2261.50:
+
+SUBROUTINE RHO_0_NAD_BW0(teta_e, phi_e, x_lambda_i, rho_0_nad_bw)
+                                                  1
+Warning: Unused dummy argument 'x_lambda_i' at (1)
+src/derivatives/cost_bw.f90:2479.18:
+
+  REAL :: hot_spot
+                  1
+Warning: Unused variable 'hot_spot' declared at (1)
+src/derivatives/cost_bw.f90:2366.32:
+
+  REAL :: ki, ke, xga, xc1, rc_d
+                                1
+Warning: Unused variable 'rc_d' declared at (1)
+src/derivatives/cost_bw.f90:2396.19:
+
+  REAL :: rho_1_nad
+                   1
+Warning: Unused variable 'rho_1_nad' declared at (1)
+src/derivatives/cost_bw.f90:2368.23:
+
+  REAL :: xg1, xg2, sum, x_hp, xl
+                       1
+Warning: Unused variable 'sum' declared at (1)
+src/derivatives/cost_bw.f90:2358.50:
+
+SUBROUTINE RHO_1_NAD_BW0(teta_e, phi_e, x_lambda_i, rho_1_nad_bw)
+                                                  1
+Warning: Unused dummy argument 'x_lambda_i' at (1)
+src/derivatives/cost_bw.f90:2513.27:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                           1
+Warning: Unused variable 'alb_tur' declared at (1)
+src/derivatives/cost_bw.f90:2513.18:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                  1
+Warning: Unused variable 'fpar_tur' declared at (1)
+src/derivatives/cost_bw.f90:2509.12:
+
+  REAL :: g0, teta_u, sum, sum1, sum2, x
+            1
+Warning: Unused variable 'g0' declared at (1)
+src/derivatives/cost_bw.f90:2527.14:
+
+  INTEGER :: i, j, k
+              1
+Warning: Unused variable 'i' declared at (1)
+src/derivatives/cost_bw.f90:2548.22:
+
+  REAL :: rho_mult_nad
+                      1
+Warning: Unused variable 'rho_mult_nad' declared at (1)
+src/derivatives/cost_bw.f90:2513.43:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                                           1
+Warning: Unused variable 'tr_dir' declared at (1)
+src/derivatives/cost_bw.f90:2513.35:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                                   1
+Warning: Unused variable 'tr_tur' declared at (1)
+src/derivatives/cost_bw.f90:2513.49:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                                                 1
+Warning: Unused variable 'tran' declared at (1)
+src/derivatives/cost_bw.f90:2551.12:
+
+  REAL :: x1
+            1
+Warning: Unused variable 'x1' declared at (1)
+src/derivatives/cost_bw.f90:2506.14:
+
+  REAL :: xmu0, xm, xr, mu, gu, xim(21), dl
+              1
+Warning: Unused variable 'xmu0' declared at (1)
+src/derivatives/cost_bw.f90:120.39:
+
+SUBROUTINE H_M_BW(n, x, x_bw, statediff, statediff_bw)
+                                       1
+Warning: Unused dummy argument 'statediff' at (1)
+src/derivatives/cost_bw.f90:134.23:
+
+  REAL(kind=8) :: xm(n), xphys(n)
+                       1
+Warning: Unused variable 'xm' declared at (1)
+src/derivatives/cost_bw.f90:3549.50:
+
+SUBROUTINE RESIDUAL_PRIOR_BW(n, x, x_bw, priordiff, priordiff_bw)
+                                                  1
+Warning: Unused dummy argument 'priordiff' at (1)
+src/derivatives/cost_bw.f90:3558.23:
+
+  REAL(kind=8) :: sx(n), x0(n)
+                       1
+Warning: Unused variable 'sx' declared at (1)
+src/derivatives/cost_bw.f90:3549.33:
+
+SUBROUTINE RESIDUAL_PRIOR_BW(n, x, x_bw, priordiff, priordiff_bw)
+                                 1
+Warning: Unused dummy argument 'x' at (1)
+src/derivatives/cost_bw.f90:3558.30:
+
+  REAL(kind=8) :: sx(n), x0(n)
+                              1
+Warning: Unused variable 'x0' declared at (1)
+src/derivatives/cost_bw.f90:20.35:
+
+SUBROUTINE COST_BW(n, x, x_bw, m, f, f_bw)
+                                   1
+Warning: Unused dummy argument 'f' at (1)
+src/derivatives/cost_bw.f90:1579.22:
+
+  REAL(kind=8) :: csq2
+                      1
+Warning: Unused variable 'csq2' declared at (1)
+src/derivatives/cost_bw.f90: In function ‘multiple_dom_bw’:
+src/derivatives/cost_bw.f90:3269:0: warning: ‘dl_bw’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     dl_bw = dl_bw + FLOAT(k-1)*xl_bw
+ ^
+src/derivatives/cost_fwv.f90:312.30:
+
+&                , brf_nadim, fpar_nadim, fpar_nadim_fwv, albedo_nadim, &
+                              1
+Warning: Rank mismatch in argument 'fpar' at (1) (scalar and rank-1)
+src/derivatives/cost_fwv.f90:2621.19:
+
+    csq2_fwv(nd) = 2*REAL(z)*z_fwv(nd) + 2*result1*result1_fwv(nd)
+                   1
+Warning: Possible change of value in conversion from COMPLEX(8) to REAL(8) at (1)
+src/derivatives/cost_fwv.f90:3614.27:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                           1
+Warning: Unused variable 'alb_tur' declared at (1)
+src/derivatives/cost_fwv.f90:3614.18:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                  1
+Warning: Unused variable 'fpar_tur' declared at (1)
+src/derivatives/cost_fwv.f90:3614.43:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                                           1
+Warning: Unused variable 'tr_dir' declared at (1)
+src/derivatives/cost_fwv.f90:3614.35:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                                   1
+Warning: Unused variable 'tr_tur' declared at (1)
+src/derivatives/cost_fwv.f90:3614.49:
+
+  REAL :: fpar_tur, alb_tur, tr_tur, tr_dir, tran
+                                                 1
+Warning: Unused variable 'tran' declared at (1)
+src/derivatives/cost_fwv.f90:3437.32:
+
+  REAL :: ki, ke, xga, xc1, rc_d
+                                1
+Warning: Unused variable 'rc_d' declared at (1)
+src/derivatives/cost_fwv.f90:3426.51:
+
+SUBROUTINE RHO_1_NAD_FWV0(teta_e, phi_e, x_lambda_i, rho_1_nad, &
+                                                   1
+Warning: Unused dummy argument 'x_lambda_i' at (1)
+src/derivatives/cost_fwv.f90:3323.32:
+
+  REAL :: ki, ke, xs1, xs2, rs_d
+                                1
+Warning: Unused variable 'rs_d' declared at (1)
+src/derivatives/cost_fwv.f90:3314.51:
+
+SUBROUTINE RHO_0_NAD_FWV0(teta_e, phi_e, x_lambda_i, rho_0_nad, &
+                                                   1
+Warning: Unused dummy argument 'x_lambda_i' at (1)
+src/derivatives/cost_fwv.f90:623.28:
+
+  REAL :: tr_tur, tr_dir_tur
+                            1
+Warning: Unused variable 'tr_dir_tur' declared at (1)
+src/derivatives/cost_fwv.f90:623.16:
+
+  REAL :: tr_tur, tr_dir_tur
+                1
+Warning: Unused variable 'tr_tur' declared at (1)
+src/derivatives/ad_support.f90:10.40:
+
+subroutine real_fwv(x, xw, y, yw, nbdirs)
+                                        1
+Warning: Unused dummy argument 'nbdirs' at (1)
+src/derivatives/ad_support.f90:21.20:
+
+subroutine real_bw(x, xb, yb)
+                    1
+Warning: Unused dummy argument 'x' at (1)
+src/derivatives/ad_support.f90:39.41:
+
+subroutine aimag_fwv(x, xw, y, yw, nbdirs)
+                                         1
+Warning: Unused dummy argument 'nbdirs' at (1)
+src/derivatives/ad_support.f90:50.21:
+
+subroutine aimag_bw(x, xb, yb)
+                     1
+Warning: Unused dummy argument 'x' at (1)
+ar: creating lib/libderiv.a
+Warning: Nonconforming tab character in column 1 of line 46
+Warning: Nonconforming tab character in column 1 of line 118
+Warning: Nonconforming tab character in column 1 of line 119
+Warning: Nonconforming tab character in column 1 of line 179
+Warning: Nonconforming tab character in column 1 of line 180
+Warning: Nonconforming tab character in column 1 of line 181
+src/semid/semiDtools.f:127.27:
+
+      real fpar_tur,alb_tur,tr_tur,tr_dir,tran                                 
+                           1
+Warning: Unused variable 'alb_tur' declared at (1)
+src/semid/semiDtools.f:127.19:
+
+      real fpar_tur,alb_tur,tr_tur,tr_dir,tran                                 
+                   1
+Warning: Unused variable 'fpar_tur' declared at (1)
+src/semid/semiDtools.f:127.41:
+
+      real fpar_tur,alb_tur,tr_tur,tr_dir,tran                                 
+                                         1
+Warning: Unused variable 'tr_dir' declared at (1)
+src/semid/semiDtools.f:127.34:
+
+      real fpar_tur,alb_tur,tr_tur,tr_dir,tran                                 
+                                  1
+Warning: Unused variable 'tr_tur' declared at (1)
+src/semid/semiDtools.f:127.46:
+
+      real fpar_tur,alb_tur,tr_tur,tr_dir,tran                                 
+                                              1
+Warning: Unused variable 'tran' declared at (1)
+src/semid/semiDtools.f:73.29:
+
+      real Ki,Ke,xga,xc1,rc_d                                                  
+                             1
+Warning: Unused variable 'rc_d' declared at (1)
+src/semid/semiDtools.f:65.53:
+
+      REAL FUNCTION rho_1_nad(teta_e,phi_e,x_lambda_i)                         
+                                                     1
+Warning: Unused dummy argument 'x_lambda_i' at (1)
+src/semid/semiDtools.f:20.29:
+
+      real Ki,Ke,xs1,xs2,rs_d                                                  
+                             1
+Warning: Unused variable 'rs_d' declared at (1)
+src/semid/semiDtools.f:13.53:
+
+      REAL FUNCTION rho_0_nad(teta_e,phi_e,x_lambda_i)                         
+                                                     1
+Warning: Unused dummy argument 'x_lambda_i' at (1)
+src/semid/semiDtools.f:955.30:
+
+      real tr_tur , tr_dir_tur                                                 
+                              1
+Warning: Unused variable 'tr_dir_tur' declared at (1)
+src/semid/semiDtools.f:955.17:
+
+      real tr_tur , tr_dir_tur                                                 
+                 1
+Warning: Unused variable 'tr_tur' declared at (1)
+ar: creating lib/libmodel.a
+ar: creating lib/libsupport.a
+Warning: Nonexistent include directory "objs"
+Warning: Nonexistent include directory "objs"
+Warning: Nonexistent include directory "objs"
+Warning: Nonexistent include directory "objs"
+lbfgsb.f: In function ‘cauchy’:
+lbfgsb.f:1458:0: warning: ‘tu’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+             xupper = nbd(i) .ge. 2 .and. tu .le. zero
+ ^
+lbfgsb.f:1487:0: warning: ‘tl’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+                t(nbreak) = tl/(-neggi)
+ ^
+Warning: Nonexistent include directory "objs"
+Warning: Nonexistent include directory "objs"
+Warning: Nonexistent include directory "objs"
+Warning: Nonexistent include directory "objs"
+ar: creating ../lib/liblbfgsb-gfortran.a
+Warning: Nonexistent include directory "objs"
+Warning: Nonexistent include directory "objs"
+eispack.f90:241.2:
+
+80 continue
+  1
+Warning: Label 80 at (1) defined but not used
+eispack.f90:233.2:
+
+50 continue
+  1
+Warning: Label 50 at (1) defined but not used
+eispack.f90:1634.5:
+
+  380 continue
+     1
+Warning: Label 380 at (1) defined but not used
+eispack.f90:2206.10:
+
+      k = scale(i)
+          1
+Warning: Possible change of value in conversion from REAL(8) to INTEGER(4) at (1)
+eispack.f90:2352.2:
+
+80 continue
+  1
+Warning: Label 80 at (1) defined but not used
+eispack.f90:3120.5:
+
+  880    continue
+     1
+Warning: Label 880 at (1) defined but not used
+eispack.f90:3579.3:
+
+300 continue
+   1
+Warning: Label 300 at (1) defined but not used
+eispack.f90:7183.3:
+
+795     continue
+   1
+Warning: Label 795 at (1) defined but not used
+eispack.f90:6894.3:
+
+260 continue
+   1
+Warning: Label 260 at (1) defined but not used
+eispack.f90:8462.3:
+
+120  continue
+   1
+Warning: Label 120 at (1) defined but not used
+eispack.f90:9441.3:
+
+540 continue
+   1
+Warning: Label 540 at (1) defined but not used
+eispack.f90:11128.3:
+
+450  continue
+   1
+Warning: Label 450 at (1) defined but not used
+eispack.f90:15172.3:
+
+740  continue
+   1
+Warning: Label 740 at (1) defined but not used
+eispack.f90:14999.3:
+
+140 continue
+   1
+Warning: Label 140 at (1) defined but not used
+eispack.f90:16709.3:
+
+300  continue
+   1
+Warning: Label 300 at (1) defined but not used
+eispack.f90:17739.3:
+
+740  continue
+   1
+Warning: Label 740 at (1) defined but not used
+eispack.f90:17715.3:
+
+700  continue
+   1
+Warning: Label 700 at (1) defined but not used
+eispack.f90:17670.3:
+
+540     continue
+   1
+Warning: Label 540 at (1) defined but not used
+eispack.f90:17644.3:
+
+520  continue
+   1
+Warning: Label 520 at (1) defined but not used
+eispack.f90:17506.3:
+
+280 continue
+   1
+Warning: Label 280 at (1) defined but not used
+eispack.f90:6102.24:
+
+  integer ( kind = 4 ) j
+                        1
+Warning: Unused variable 'j' declared at (1)
+eispack.f90:12233.25:
+
+  integer ( kind = 4 ) k1
+                         1
+Warning: Unused variable 'k1' declared at (1)
+eispack.f90:15980.24:
+
+  integer ( kind = 4 ) k
+                        1
+Warning: Unused variable 'k' declared at (1)
+eispack.f90:440.21:
+
+  real ( kind = 8 ) s
+                     1
+Warning: Unused variable 's' declared at (1)
+eispack.f90:6612.25:
+
+  real ( kind = 8 ) hnorm
+                         1
+Warning: Unused variable 'hnorm' declared at (1)
+eispack.f90:6638.24:
+
+  real ( kind = 8 ) temp
+                        1
+Warning: Unused variable 'temp' declared at (1)
+eispack.f90:5865.24:
+
+  integer ( kind = 4 ) j
+                        1
+Warning: Unused variable 'j' declared at (1)
+eispack.f90:13789.29:
+
+  real ( kind = 8 ) fwork4(n)
+                             1
+Warning: Unused variable 'fwork4' declared at (1)
+eispack.f90: In function ‘tql2’:
+eispack.f90:15645:0: warning: ‘s2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         p = - s * s2 * c3 * el1 * e(l) / dl1
+ ^
+eispack.f90:15645:0: warning: ‘c3’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90: In function ‘tqlrat’:
+eispack.f90:15816:0: warning: ‘c’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+        if ( e2(m) <= c ) then
+ ^
+eispack.f90:15765:0: warning: ‘b’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   real ( kind = 8 ) b
+ ^
+eispack.f90: In function ‘reduc2’:
+eispack.f90:12898:0: warning: ‘y’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+           b(j,i) = x / y
+ ^
+eispack.f90: In function ‘reduc’:
+eispack.f90:12730:0: warning: ‘y’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+           b(j,i) = x / y
+ ^
+eispack.f90: In function ‘qzvec’:
+eispack.f90:11523:0: warning: ‘zz’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         b(i+1,en) = (-s - y * t) / zz
+ ^
+eispack.f90:11655:0: warning: ‘z1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         t1 = (-r - zz * b(i+1,na) + z1 * b(i+1,en) ) / y
+ ^
+eispack.f90:11650:0: warning: ‘x1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         ti = -sa - x * b(i+1,en) - x1 * b(i+1,na)
+ ^
+eispack.f90:11650:0: warning: ‘x’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90:11523:0: warning: ‘s’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         b(i+1,en) = (-s - y * t) / zz
+ ^
+eispack.f90:11630:0: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         tr = y * ra - w * r + w1 * s
+ ^
+eispack.f90: In function ‘qzval’:
+eispack.f90:11134:0: warning: ‘e’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( abs ( e ) * bn <= an ) then
+ ^
+eispack.f90:11134:0: warning: ‘an’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90: In function ‘qzit’:
+eispack.f90:10631:0: warning: ‘sh’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   a1 = a11 - sh
+ ^
+eispack.f90:10727:0: warning: ‘a3’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      s = abs ( a1 ) + abs ( a2 ) + abs ( a3 )
+ ^
+eispack.f90: In function ‘hqr’:
+eispack.f90:6419:0: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     s = sign ( sqrt ( p**2 + q**2 + r**2 ), p )
+ ^
+eispack.f90:6419:0: warning: ‘q’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90:6419:0: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90:6239:0: warning: ‘m’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   integer ( kind = 4 ) m
+ ^
+eispack.f90: In function ‘hqr2’:
+eispack.f90:7064:0: warning: ‘s’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+           h(i+1,en) = (-s - y * t ) / zz
+ ^
+eispack.f90:6814:0: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      s = sign ( sqrt ( p**2 + q**2 + r**2 ), p )
+ ^
+eispack.f90:6814:0: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90:6625:0: warning: ‘m’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   integer ( kind = 4 ) m
+ ^
+eispack.f90: In function ‘comqr2’:
+eispack.f90:4895:0: warning: ‘l’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   do i = l + 1, en
+ ^
+eispack.f90: In function ‘bisect’:
+eispack.f90:1582:0: warning: ‘xu’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( ( x0 - xu ) <= abs ( eps1 ) ) then
+ ^
+eispack.f90:1582:0: warning: ‘x0’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90:1476:0: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if ( r == m ) then
+ ^
+eispack.f90:1663:0: warning: ‘m2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   r = r + m2 - m1 + 1
+ ^
+eispack.f90:1630:0: warning: ‘m1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+        rv4(m1) = x1
+ ^
+eispack.f90:1623:0: warning: ‘k’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( k <= s ) then
+ ^
+eispack.f90: In function ‘cinvit’:
+eispack.f90:3113:0: warning: ‘ukroot’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+        rv1(j) = rv1(j) - eps3 * x
+ ^
+eispack.f90:3086:0: warning: ‘j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      x = rv1(j)
+ ^
+eispack.f90:3080:0: warning: ‘growto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( norm < growto ) then
+ ^
+eispack.f90:3041:0: warning: ‘eps3’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+        rm1(uk,uk) = eps3
+ ^
+eispack.f90: In function ‘comlr’:
+eispack.f90:3661:0: warning: ‘m’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   do i = m + 1, en
+ ^
+eispack.f90:3508:0: warning: ‘l’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   integer ( kind = 4 ) l
+ ^
+eispack.f90: In function ‘comlr2’:
+eispack.f90:4030:0: warning: ‘m’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   do i = m + 1, en
+ ^
+eispack.f90:3834:0: warning: ‘l’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   integer ( kind = 4 ) l
+ ^
+eispack.f90: In function ‘invit’:
+eispack.f90:2558:0: warning: ‘y’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   bis = bi / s
+ ^
+eispack.f90:8680:0: note: ‘y’ was declared here
+   real ( kind = 8 ) y
+ ^
+eispack.f90:8897:0: warning: ‘t’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         x = rm1(mp,mp) * rm1(mp,mp) + t * t
+ ^
+eispack.f90:9098:0: warning: ‘ukroot’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      rv1(j) = rv1(j) - eps3 * x
+ ^
+eispack.f90:8665:0: warning: ‘ns’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   integer ( kind = 4 ) ns
+ ^
+eispack.f90:9061:0: warning: ‘j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      x = rv1(j)
+ ^
+eispack.f90:9055:0: warning: ‘growto’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( norm < growto ) then
+ ^
+eispack.f90:9098:0: warning: ‘eps3’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      rv1(j) = rv1(j) - eps3 * x
+ ^
+eispack.f90: In function ‘rgg’:
+eispack.f90:11134:0: warning: ‘e’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( abs ( e ) * bn <= an ) then
+ ^
+eispack.f90:10975:0: note: ‘e’ was declared here
+   real ( kind = 8 ) e
+ ^
+eispack.f90:11134:0: warning: ‘an’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( abs ( e ) * bn <= an ) then
+ ^
+eispack.f90:10960:0: note: ‘an’ was declared here
+   real ( kind = 8 ) an
+ ^
+eispack.f90: In function ‘svd’:
+eispack.f90:14420:0: warning: ‘l1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   integer ( kind = 4 ) l1
+ ^
+eispack.f90:14638:0: warning: ‘l’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      do i = l, k
+ ^
+eispack.f90: In function ‘tql1’:
+eispack.f90:15417:0: warning: ‘s2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     p = - s * s2 * c3 * el1 * e(l) / dl1
+ ^
+eispack.f90:15417:0: warning: ‘c3’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90: In function ‘tridib’:
+eispack.f90:17147:0: warning: ‘m2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   r = r + m2 - m1 + 1
+ ^
+eispack.f90:17108:0: warning: ‘k’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( k <= s ) then
+ ^
+eispack.f90:16957:0: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if ( r == m ) then
+ ^
+eispack.f90:16940:0: warning: ‘m22’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   else if ( m22 < s ) then
+ ^
+eispack.f90: In function ‘tsturm’:
+eispack.f90:17516:0: warning: ‘xu’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( ( x0 - xu ) <= abs ( eps1 ) ) then
+ ^
+eispack.f90:17516:0: warning: ‘x0’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+eispack.f90:17329:0: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   integer ( kind = 4 ) r
+ ^
+eispack.f90:17324:0: warning: ‘m2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   integer ( kind = 4 ) m2
+ ^
+eispack.f90:17632:0: warning: ‘m1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( k /= m1 ) then
+ ^
+eispack.f90:17565:0: warning: ‘k’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      if ( k <= s ) then
+ ^
+ar: creating ../lib/libeis.a
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:52: MatplotlibDeprecationWarning: The csv2rec function was deprecated in version 2.2.
+  point+'.csv', comments='%')
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:54: MatplotlibDeprecationWarning: The csv2rec function was deprecated in version 2.2.
+  comments='%')
+/home/users/ewanp82/.local/lib/python2.7/site-packages/pandas/plotting/_converter.py:129: FutureWarning: Using an implicitly registered datetime converter for a matplotlib plotting method. The converter was registered by pandas on import. Future versions of pandas will require you to explicitly register matplotlib converters.
+
+To register the converters:
+	>>> from pandas.plotting import register_matplotlib_converters
+	>>> register_matplotlib_converters()
+  warnings.warn(msg, FutureWarning)
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:232: MatplotlibDeprecationWarning: The csv2rec function was deprecated in version 2.2.
+  point+'.csv', comments='%')
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:234: MatplotlibDeprecationWarning: The csv2rec function was deprecated in version 2.2.
+  comments='%')
+/apps/contrib/jaspy/miniconda_envs/jaspy2.7/m2-4.6.14/envs/jaspy2.7-m2-4.6.14-r20190715/lib/python2.7/site-packages/numpy/lib/function_base.py:2400: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[:, None]
+/apps/contrib/jaspy/miniconda_envs/jaspy2.7/m2-4.6.14/envs/jaspy2.7-m2-4.6.14-r20190715/lib/python2.7/site-packages/numpy/lib/function_base.py:2401: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[None, :]
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:284: RuntimeWarning: divide by zero encountered in double_scalars
+  taylor_pri = (1 + pri_corrc)**4 / (4*(pri_std/field_std + 1/(pri_std/field_std))**2)

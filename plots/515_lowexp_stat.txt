@@ -1,0 +1,3 @@
+515_low, 001, sm_cor: 0.00, lai_cor: nan 
+515_low, 002, sm_cor: 0.04, lai_cor: 0.92 
+515_low, 000, sm_cor: 0.20, lai_cor: 0.95 

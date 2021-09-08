@@ -1,0 +1,3 @@
+508_med, 000, sm_cor: 0.69, lai_cor: 0.95
+508_med, 001, sm_cor: 0.18, lai_cor: -0.67 
+508_med, 002, sm_cor: 0.18, lai_cor: 0.80 

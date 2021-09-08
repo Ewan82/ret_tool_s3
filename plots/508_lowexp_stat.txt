@@ -1,0 +1,3 @@
+508_low, 001, sm_cor: 0.31, lai_cor: -0.85 
+508_low, 002, sm_cor: -0.03, lai_cor: 0.86 
+508_low, 000, sm_cor: 0.57, lai_cor: 0.97 

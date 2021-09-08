@@ -1,0 +1,21 @@
+cpu-bind=MASK - host604, task  0  0 [17015]: mask 0x4 set
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:52: MatplotlibDeprecationWarning: The csv2rec function was deprecated in version 2.2.
+  point+'.csv', comments='%')
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:54: MatplotlibDeprecationWarning: The csv2rec function was deprecated in version 2.2.
+  comments='%')
+/home/users/ewanp82/.local/lib/python2.7/site-packages/pandas/plotting/_converter.py:129: FutureWarning: Using an implicitly registered datetime converter for a matplotlib plotting method. The converter was registered by pandas on import. Future versions of pandas will require you to explicitly register matplotlib converters.
+
+To register the converters:
+	>>> from pandas.plotting import register_matplotlib_converters
+	>>> register_matplotlib_converters()
+  warnings.warn(msg, FutureWarning)
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:232: MatplotlibDeprecationWarning: The csv2rec function was deprecated in version 2.2.
+  point+'.csv', comments='%')
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:234: MatplotlibDeprecationWarning: The csv2rec function was deprecated in version 2.2.
+  comments='%')
+/apps/contrib/jaspy/miniconda_envs/jaspy2.7/m2-4.6.14/envs/jaspy2.7-m2-4.6.14-r20190715/lib/python2.7/site-packages/numpy/lib/function_base.py:2400: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[:, None]
+/apps/contrib/jaspy/miniconda_envs/jaspy2.7/m2-4.6.14/envs/jaspy2.7-m2-4.6.14-r20190715/lib/python2.7/site-packages/numpy/lib/function_base.py:2401: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[None, :]
+/home/users/ewanp82/projects/ret_tool_s3/plot_ret.py:284: RuntimeWarning: divide by zero encountered in double_scalars
+  taylor_pri = (1 + pri_corrc)**4 / (4*(pri_std/field_std + 1/(pri_std/field_std))**2)
